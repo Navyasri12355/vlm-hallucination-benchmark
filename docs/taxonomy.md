@@ -1,6 +1,4 @@
 # Hallucination Taxonomy for VLM Benchmark
-`docs/taxonomy.md`
-
 ---
 
 ## Definition
