@@ -24,7 +24,11 @@ VLM Hallucinations
 │   ├── H3a: Spatial (positional)
 │   └── H3b: Action / Interaction
 ├── H4: Counting / Numerical
-├── H5: Existence Negation
+├── H5: Existence Negation        
+│   ├── H5a: Negative pronoun
+│   ├── H5b: Implicit negation
+│   ├── H5c: Contrastive pair
+│   └── H5d: Unsolvable probe
 ├── H6: Cross-modal Consistency
 │   ├── H6a: Self-contradiction across question phrasings
 │   └── H6b: Description-answer inconsistency
@@ -217,12 +221,12 @@ The model fails to correctly respond when the question is phrased as a negation,
 NOPE (2023) is the primary paper for this category. It constructs 29.5k synthetic negative-pronoun questions ("none", "no one", "nobody", "nowhere", "neither") and finds that VLMs hallucinate significantly more on images with higher lexical diversity, more scene-relevant co-occurring objects, and larger answer scopes. HaELM independently corroborates this through its analysis of Yes-bias, showing the problem is amplified when negation framing conflicts with the model's default affirmative response tendency. M-HalDetect (AAAI 2024) provides fine-grained annotations at the accurate / inaccurate / analysis level, with a reward model that correlates highly with human judgement — this can serve as an auxiliary scorer for H5 in cases where binary accuracy is insufficient. VQAv2-IDK (2024) introduces "I don't know" as a valid response class, directly relevant to existence negation: a well-calibrated model should express uncertainty or deny rather than hallucinate a positive answer.
 
 ### Subtypes
-| Subtype | Description |
-|---|---|
-| Negative pronoun | Uses "no", "none", "neither", "nobody" in the question |
-| Implicit negation | "What is missing from this scene?" |
-| Contrastive pair | Two images — one with object, one without — model must differentiate |
-| Unsolvable probe | Question presupposes an object that doesn't exist — correct answer is "not applicable" |
+| ID | Subtype | Description |
+|---|---|---|
+| H5a | Negative pronoun | Uses "no", "none", "neither", "nobody" in the question |
+| H5b | Implicit negation | "What is missing from this scene?" |
+| H5c | Contrastive pair | Two images — one with object, one without — model must differentiate |
+| H5d | Unsolvable probe | Question presupposes an object that doesn't exist — correct answer is "not applicable" |
 
 ### Question Templates
 ```
@@ -241,7 +245,7 @@ NOPE (2023) is the primary paper for this category. It constructs 29.5k syntheti
 - Lovenia et al., *NOPE*, 2023 — arxiv.org/abs/2310.05338
 - Wang et al., *HaELM*, 2023 — arxiv.org/abs/2308.15126
 - Hendryx et al., *M-HalDetect*, AAAI 2024 — arxiv.org/abs/2308.06394
-- NC Soft, *VQAv2-IDK*, 2024 — arxiv.org/abs/2402.09717
+- Tong et al., *VQAv2-IDK*, 2024 — arxiv.org/abs/2402.09717
 - Miyai et al., *Unsolvable Problem Detection*, 2024 — arxiv.org/abs/2403.20331
 
 ---
@@ -364,7 +368,10 @@ Show two images. Reference object from image 1 when asking about image 2.
 | H3a | Spatial Relations | Visual Genome / PSG | Binary | Accuracy, FPR | RAH-Bench, HallusionBench, MMRel |
 | H3b | Action/Interaction | Visual Genome / PSG | Binary | Accuracy | RAH-Bench, MERLIM |
 | H4 | Counting / Numerical | MS-COCO instances | Free-form + Binary | Exact Match, MAE, Consistency | MME, HallusionBench, Number Consistency |
-| H5 | Existence Negation | MS-COCO instances | Binary (negated) | Accuracy, Negation Bias, IDK Rate | NOPE, HaELM, M-HalDetect, IDK |
+| H5a | Negative pronoun | MS-COCO instances | Binary (negated) | Accuracy, Negation Bias | NOPE, HaELM |
+| H5b | Implicit negation | MS-COCO instances | Open-ended | Accuracy | NOPE |
+| H5c | Contrastive pair | MS-COCO image pairs | Binary | Accuracy | M-HalDetect |
+| H5d | Unsolvable probe | MS-COCO instances | Open-ended | IDK Rate | VQAv2-IDK, UPD |
 | H6a | Cross-modal Consistency (phrasings) | Self-generated pairs | Paired Yes/No | Consistency Score | CAST, CIEM |
 | H6b | Description-Answer Consistency | Self-generated pairs | Open + Binary | FAITHSCORE, VALOR | FAITHSCORE, VALOR-EVAL |
 | H7a | Region / OCR Bias | Bingo annotations | Binary | Bias Susceptibility Score | Bingo |
