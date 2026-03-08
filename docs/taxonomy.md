@@ -1,5 +1,4 @@
 # Hallucination Taxonomy for VLM Benchmark
----
 
 ## Definition
 
