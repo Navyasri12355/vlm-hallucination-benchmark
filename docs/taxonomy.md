@@ -2,7 +2,7 @@
 
 ## Definition
 
-Hallucination in LVLMs refers to the generation of text with information that is not present in, or is inconsistent with, the visual input. This encompasses hallucinated objects, inaccurate attributes and relationships, unfaithful descriptions, and responses driven by language priors rather than actual visual evidence. Root causes include language prior dominance, insufficient visual context, biases and misinformation in training data, and misalignment between visual encoders and language decoders.
+Hallucination in VLMs refers to the generation of text with information that is not present in, or is inconsistent with, the visual input. This encompasses hallucinated objects, inaccurate attributes and relationships, unfaithful descriptions, and responses driven by language priors rather than actual visual evidence. Root causes include language prior dominance, insufficient visual context, biases and misinformation in training data, and misalignment between visual encoders and language decoders.
 
 ---
 
