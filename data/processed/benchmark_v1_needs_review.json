@@ -199,13 +199,13 @@
     "image_id": 42276,
     "category": "H2",
     "subcategory": "H2b",
-    "question": "Is the foot stool smaller than the bad sentence?",
+    "question": "Is the foot stool shorter than the glove?",
     "ground_truth": "ambiguous",
     "difficulty": "hard",
     "metadata": {
       "object_a": "foot stool",
-      "object_b": "bad sentence",
-      "size_word": "smaller",
+      "object_b": "glove",
+      "size_word": "shorter",
       "needs_verification": true
     }
   },
@@ -675,12 +675,12 @@
     "image_id": 459195,
     "category": "H2",
     "subcategory": "H2b",
-    "question": "Is the log smaller than the jeans?",
+    "question": "Is the log smaller than the three people?",
     "ground_truth": "ambiguous",
     "difficulty": "hard",
     "metadata": {
       "object_a": "log",
-      "object_b": "jeans",
+      "object_b": "three people",
       "size_word": "smaller",
       "needs_verification": true
     }
@@ -689,12 +689,12 @@
     "image_id": 459195,
     "category": "H2",
     "subcategory": "H2b",
-    "question": "Is the hoodie taller than the shirt?",
+    "question": "Is the hoodie taller than the log?",
     "ground_truth": "ambiguous",
     "difficulty": "hard",
     "metadata": {
       "object_a": "hoodie",
-      "object_b": "shirt",
+      "object_b": "log",
       "size_word": "taller",
       "needs_verification": true
     }
@@ -787,12 +787,12 @@
     "image_id": 511599,
     "category": "H2",
     "subcategory": "H2b",
-    "question": "Is the body wider than the person?",
+    "question": "Is the body wider than the water?",
     "ground_truth": "ambiguous",
     "difficulty": "hard",
     "metadata": {
       "object_a": "body",
-      "object_b": "person",
+      "object_b": "water",
       "size_word": "wider",
       "needs_verification": true
     }
@@ -1053,12 +1053,12 @@
     "image_id": 287874,
     "category": "H2",
     "subcategory": "H2b",
-    "question": "Is the rocks shorter than the train?",
+    "question": "Is the rocks shorter than the bush?",
     "ground_truth": "ambiguous",
     "difficulty": "hard",
     "metadata": {
       "object_a": "rocks",
-      "object_b": "train",
+      "object_b": "bush",
       "size_word": "shorter",
       "needs_verification": true
     }
@@ -1655,13 +1655,13 @@
     "image_id": 20571,
     "category": "H2",
     "subcategory": "H2b",
-    "question": "Is the wheel house larger than the boat?",
+    "question": "Is the wheel house bigger than the fire extinguishers?",
     "ground_truth": "ambiguous",
     "difficulty": "hard",
     "metadata": {
       "object_a": "wheel house",
-      "object_b": "boat",
-      "size_word": "larger",
+      "object_b": "fire extinguishers",
+      "size_word": "bigger",
       "needs_verification": true
     }
   },
@@ -1669,13 +1669,13 @@
     "image_id": 223955,
     "category": "H2",
     "subcategory": "H2b",
-    "question": "Is the tattoo taller than the grass?",
+    "question": "Is the tattoo larger than the rubber band?",
     "ground_truth": "ambiguous",
     "difficulty": "hard",
     "metadata": {
       "object_a": "tattoo",
-      "object_b": "grass",
-      "size_word": "taller",
+      "object_b": "rubber band",
+      "size_word": "larger",
       "needs_verification": true
     }
   },
@@ -1683,13 +1683,13 @@
     "image_id": 223955,
     "category": "H2",
     "subcategory": "H2b",
-    "question": "Is the rubber band larger than the man?",
+    "question": "Is the rubber band shorter than the frisbee?",
     "ground_truth": "ambiguous",
     "difficulty": "hard",
     "metadata": {
       "object_a": "rubber band",
-      "object_b": "man",
-      "size_word": "larger",
+      "object_b": "frisbee",
+      "size_word": "shorter",
       "needs_verification": true
     }
   },
@@ -2453,12 +2453,12 @@
     "image_id": 247917,
     "category": "H2",
     "subcategory": "H2b",
-    "question": "Is the man shorter than the kid?",
+    "question": "Is the man shorter than the bracelet?",
     "ground_truth": "ambiguous",
     "difficulty": "hard",
     "metadata": {
       "object_a": "man",
-      "object_b": "kid",
+      "object_b": "bracelet",
       "size_word": "shorter",
       "needs_verification": true
     }
@@ -2467,12 +2467,12 @@
     "image_id": 247917,
     "category": "H2",
     "subcategory": "H2b",
-    "question": "Is the grass larger than the hat?",
+    "question": "Is the grass larger than the team?",
     "ground_truth": "ambiguous",
     "difficulty": "hard",
     "metadata": {
       "object_a": "grass",
-      "object_b": "hat",
+      "object_b": "team",
       "size_word": "larger",
       "needs_verification": true
     }
@@ -2495,12 +2495,12 @@
     "image_id": 249219,
     "category": "H2",
     "subcategory": "H2b",
-    "question": "Is the trees taller than the boxes?",
+    "question": "Is the trees taller than the sidewalk?",
     "ground_truth": "ambiguous",
     "difficulty": "hard",
     "metadata": {
       "object_a": "trees",
-      "object_b": "boxes",
+      "object_b": "sidewalk",
       "size_word": "taller",
       "needs_verification": true
     }
