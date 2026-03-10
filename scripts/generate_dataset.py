@@ -377,7 +377,7 @@ def build_annotation_cache(coco: COCO) -> tuple:
     """
     img_to_cats       = defaultdict(set)
     img_to_cat_counts = defaultdict(lambda: defaultdict(int))
-    for ann in coco.loadAnns(coco.getAnnIds()):
+    for ann in coco.anns.values():
         img_to_cats[ann["image_id"]].add(ann["category_id"])
         img_to_cat_counts[ann["image_id"]][ann["category_id"]] += 1
     return img_to_cats, img_to_cat_counts
@@ -801,13 +801,13 @@ def generate_h5(
         # Image ID kept in metadata only — not in question text.
         if h5c < target and present_names:
             shared_obj = rng.choice(present_names)
-            absent_candidates = sorted(
+            absent_candidates = [
                 i for i in images
                 if i != img_id
                 and shared_obj not in img_to_cat_names.get(i, set())
-            )
+            ]
             if absent_candidates:
-                img_b = rng.choice(absent_candidates[:50])
+                img_b = rng.choice(absent_candidates)
                 # Rephrase as contrastive: "...like the reference image?"
                 if is_plural_token(shared_obj):
                     plural = display_plural(shared_obj) \
@@ -907,11 +907,23 @@ def generate_h7c(
             continue
 
         false_obj = rng.choice(absent_names[:20])
-        art       = indefinite_article(false_obj)
         denial    = no_existence_denial(false_obj)
 
-        template = rng.choice(INTERFERENCE_TEMPLATES)
-        question = template.format(ART=art, FALSE_OBJ=false_obj)
+        if is_plural_token(false_obj):
+            plural = display_plural(false_obj)
+            # Use article-free or "some"-article templates for plural objects
+            plural_templates = [
+                f"Since there are {plural} in this image, what color are they?",
+                f"Given that there are {plural} here, where are they located?",
+                f"The {plural} in this photo appear to be what color?",
+                f"Can you describe the {plural} visible in this scene?",
+                f"What are the {plural} doing in this image?",
+            ]
+            question = rng.choice(plural_templates)
+        else:
+            art      = indefinite_article(false_obj)
+            template = rng.choice(INTERFERENCE_TEMPLATES)
+            question = template.format(ART=art, FALSE_OBJ=false_obj)
 
         records.append(make_record(
             img_id, "H7", "H7c",
