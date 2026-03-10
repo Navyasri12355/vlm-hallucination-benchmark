@@ -114,18 +114,15 @@ ACTION_PREDICATES = {
 }
 
 # Text-to-image interference templates for H7c.
-# {ART} = indefinite article, {FALSE_OBJ} = object name
+# {ART} = indefinite article, {FALSE_OBJ} = object name.
+# Denial is computed at generation time via no_existence_denial() so it
+# correctly handles plural categories — not stored in this list.
 INTERFERENCE_TEMPLATES = [
-    ("Since {ART} {FALSE_OBJ} is in this image, what color is it?",
-     "there is no {FALSE_OBJ} in this image"),
-    ("Given that there is {ART} {FALSE_OBJ} here, where is it located?",
-     "there is no {FALSE_OBJ} in this image"),
-    ("The {FALSE_OBJ} in this photo appears to be what color?",
-     "there is no {FALSE_OBJ} in this image"),
-    ("Can you describe the {FALSE_OBJ} visible in this scene?",
-     "there is no {FALSE_OBJ} in this image"),
-    ("What is the {FALSE_OBJ} doing in this image?",
-     "there is no {FALSE_OBJ} in this image"),
+    "Since {ART} {FALSE_OBJ} is in this image, what color is it?",
+    "Given that there is {ART} {FALSE_OBJ} here, where is it located?",
+    "The {FALSE_OBJ} in this photo appears to be what color?",
+    "Can you describe the {FALSE_OBJ} visible in this scene?",
+    "What is the {FALSE_OBJ} doing in this image?",
 ]
 
 # COCO-specific plural/display overrides: canonical name → (plural_form, is_plural)
@@ -285,15 +282,39 @@ def sanitize_vg_token(token: str) -> str | None:
     return token
 
 
+# Strings that appear in VG annotations as annotation markers, quantifiers,
+# or sentence fragments rather than object names — reject from needs-review set
+REVIEW_ARTIFACT_STOPLIST = {
+    # Annotation markers
+    "removed", "deleted", "unknown", "none", "null", "na", "n/a",
+    "unlabeled", "other", "misc", "item", "object", "thing", "stuff",
+    # Quantifiers / vague descriptors that are not object names
+    "several", "many", "some", "few", "large", "small", "big", "tall",
+    "various", "multiple", "different", "certain", "another",
+    # Sentence fragments / bad annotations
+    "bad sentence", "no label", "not sure", "hard to tell",
+    "someon", "someon", "someon e",
+}
+
+
 def sanitize_review_token(token: str) -> str | None:
     """
     Stricter sanitization for needs-review H2b object strings.
-    Requires MIN_REVIEW_TOKEN_LEN characters and full alpha ratio.
+    Rejects:
+      - Tokens shorter than MIN_REVIEW_TOKEN_LEN characters
+      - Tokens containing non-alpha/space characters
+      - Known annotation artifacts, quantifiers, and sentence fragments
+        from REVIEW_ARTIFACT_STOPLIST
     """
     token = token.strip().lower()
     if len(token) < MIN_REVIEW_TOKEN_LEN:
         return None
     if not all(c.isalpha() or c == " " for c in token):
+        return None
+    if token in REVIEW_ARTIFACT_STOPLIST:
+        return None
+    # Reject if any word in a multi-word token is a known artifact
+    if any(word in REVIEW_ARTIFACT_STOPLIST for word in token.split()):
         return None
     return token
 
@@ -787,7 +808,6 @@ def generate_h5(
             )
             if absent_candidates:
                 img_b = rng.choice(absent_candidates[:50])
-                q, _  = existence_question(shared_obj, present=True)
                 # Rephrase as contrastive: "...like the reference image?"
                 if is_plural_token(shared_obj):
                     plural = display_plural(shared_obj) \
@@ -826,11 +846,12 @@ def generate_h5(
                     f"Describe the {plural} in this image.",
                 ]
             else:
+                obj_plural = display_plural(absent)
                 probe_templates = [
                     f"What color is the {absent} in this image?",
                     f"Where is the {absent} located in this image?",
                     f"What is the {absent} doing in this image?",
-                    f"How many {display_plural(absent)} are there in this image?",
+                    f"How many {obj_plural} are there in this image?",
                     f"Describe the {absent} in this image.",
                 ]
             records.append(make_record(
@@ -889,8 +910,8 @@ def generate_h7c(
         art       = indefinite_article(false_obj)
         denial    = no_existence_denial(false_obj)
 
-        template_str, _ = rng.choice(INTERFERENCE_TEMPLATES)
-        question = template_str.format(ART=art, FALSE_OBJ=false_obj)
+        template = rng.choice(INTERFERENCE_TEMPLATES)
+        question = template.format(ART=art, FALSE_OBJ=false_obj)
 
         records.append(make_record(
             img_id, "H7", "H7c",
