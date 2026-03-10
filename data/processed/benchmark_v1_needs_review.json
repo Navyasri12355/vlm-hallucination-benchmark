@@ -1,0 +1,5406 @@
+[
+  {
+    "image_id": 374727,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the window smaller than the building?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "window",
+      "object_b": "building",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 374727,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the window bigger than the building?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "window",
+      "object_b": "building",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 374727,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the window shorter than the building?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "window",
+      "object_b": "building",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 377000,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the window seal shorter than the tabby cat?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "window seal",
+      "object_b": "tabby cat",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 377000,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tail wider than the rain?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tail",
+      "object_b": "rain",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 195045,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tree wider than the bench?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tree",
+      "object_b": "bench",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 331799,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the plant wider than the america?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "plant",
+      "object_b": "america",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 74457,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the surfboard shorter than the ocean?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "surfboard",
+      "object_b": "ocean",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 74457,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the ocean shorter than the pebble?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "ocean",
+      "object_b": "pebble",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 74457,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the dock bigger than the dingy?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "dock",
+      "object_b": "dingy",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 74457,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the dingy smaller than the stripe?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "dingy",
+      "object_b": "stripe",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 74457,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the lamp post wider than the beach?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "lamp post",
+      "object_b": "beach",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 74457,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the pole taller than the surfboard?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "pole",
+      "object_b": "surfboard",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 168593,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the bush bigger than the screen?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "bush",
+      "object_b": "screen",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 367680,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tree smaller than the cart?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tree",
+      "object_b": "cart",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 367680,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the roof shorter than the shirt?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "roof",
+      "object_b": "shirt",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 429109,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tree smaller than the window?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tree",
+      "object_b": "window",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 9772,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the camera wider than the ring?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "camera",
+      "object_b": "ring",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 9772,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the towel wider than the floor?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "towel",
+      "object_b": "floor",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 222118,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the mouth wider than the phone?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "mouth",
+      "object_b": "phone",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 267903,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the mark taller than the spot?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "mark",
+      "object_b": "spot",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 474039,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the nose shorter than the left hand?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "nose",
+      "object_b": "left hand",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 234607,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the shirt taller than the glasses?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "shirt",
+      "object_b": "glasses",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 234607,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the smallfoot smaller than the girl?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "smallfoot",
+      "object_b": "girl",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 383842,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the area smaller than the gaming controller?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "area",
+      "object_b": "gaming controller",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 286182,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the blue bowl larger than the bowl?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "blue bowl",
+      "object_b": "bowl",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 286182,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the plate shorter than the radiator?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "plate",
+      "object_b": "radiator",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 344611,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the road restraint shorter than the leaves?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "road restraint",
+      "object_b": "leaves",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 344611,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the road wider than the leaves?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "road",
+      "object_b": "leaves",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 344611,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the road restraint wider than the building?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "road restraint",
+      "object_b": "building",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 344611,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the window smaller than the road verge?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "window",
+      "object_b": "road verge",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 344611,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the window shorter than the safety board?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "window",
+      "object_b": "safety board",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 344611,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the window wider than the road verge?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "window",
+      "object_b": "road verge",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 344611,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the window bigger than the water?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "window",
+      "object_b": "water",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 344611,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the window taller than the caution board?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "window",
+      "object_b": "caution board",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 466416,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the building smaller than the light?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "building",
+      "object_b": "light",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 63602,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the glass taller than the sticker?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "glass",
+      "object_b": "sticker",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 405249,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the hair shorter than the candle?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "hair",
+      "object_b": "candle",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 405249,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the hair taller than the jacket?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "hair",
+      "object_b": "jacket",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 405249,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the hair larger than the square?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "hair",
+      "object_b": "square",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 224675,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the hair wider than the nose?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "hair",
+      "object_b": "nose",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 459195,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the hoodie wider than the woman?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "hoodie",
+      "object_b": "woman",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 437514,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tree wider than the leaf?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tree",
+      "object_b": "leaf",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 515266,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the bench smaller than the license?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "bench",
+      "object_b": "license",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 166521,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the television larger than the book?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "television",
+      "object_b": "book",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 427055,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tree shorter than the building?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tree",
+      "object_b": "building",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 488251,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the horse smaller than the vest?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "horse",
+      "object_b": "vest",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 488251,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tree bigger than the wall?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tree",
+      "object_b": "wall",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 511599,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the body wider than the person?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "body",
+      "object_b": "person",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 511599,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the water bigger than the slab?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "water",
+      "object_b": "slab",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 214720,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the floor lamp shorter than the sofa?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "floor lamp",
+      "object_b": "sofa",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 214720,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the knife wider than the window?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "knife",
+      "object_b": "window",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 214720,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the wood table taller than the plate?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "wood table",
+      "object_b": "plate",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 91500,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the sink smaller than the sweatshirt?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "sink",
+      "object_b": "sweatshirt",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 91500,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the hair smaller than the jeans?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "hair",
+      "object_b": "jeans",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 91500,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the sink faucet bigger than the person?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "sink faucet",
+      "object_b": "person",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 91500,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the hair larger than the chair?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "hair",
+      "object_b": "chair",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 91500,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the hair larger than the boxes?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "hair",
+      "object_b": "boxes",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 91500,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the bottle wider than the hand?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "bottle",
+      "object_b": "hand",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 91500,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the bottle larger than the table?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "bottle",
+      "object_b": "table",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 91500,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the bottle smaller than the sink faucet?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "bottle",
+      "object_b": "sink faucet",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 368900,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the table taller than the television?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "table",
+      "object_b": "television",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 514376,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the pole larger than the tram?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "pole",
+      "object_b": "tram",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 263969,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the knife bigger than the grape?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "knife",
+      "object_b": "grape",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 287874,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the rocks wider than the train?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "rocks",
+      "object_b": "train",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 457078,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the figurine larger than the mummy?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "figurine",
+      "object_b": "mummy",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 457078,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the poster wider than the frame?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "poster",
+      "object_b": "frame",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 47828,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the bridge bigger than the highway?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "bridge",
+      "object_b": "highway",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 47828,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tower larger than the sidewalk?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tower",
+      "object_b": "sidewalk",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 342006,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tower bigger than the flag?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tower",
+      "object_b": "flag",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 342006,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the building shorter than the tower?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "building",
+      "object_b": "tower",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 342006,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the building larger than the ripples?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "building",
+      "object_b": "ripples",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 342006,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tower wider than the bridge?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tower",
+      "object_b": "bridge",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 342006,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the building bigger than the ripples?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "building",
+      "object_b": "ripples",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 404484,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the entertainment center wider than the plant?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "entertainment center",
+      "object_b": "plant",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 242946,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the table shorter than the woman?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "table",
+      "object_b": "woman",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 242946,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the glass smaller than the chopstick?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "glass",
+      "object_b": "chopstick",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 242946,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the glass bigger than the hand?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "glass",
+      "object_b": "hand",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 242946,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the glass wider than the plate?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "glass",
+      "object_b": "plate",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 508917,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tower taller than the train tracks?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tower",
+      "object_b": "train tracks",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 361142,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the window wider than the banner?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "window",
+      "object_b": "banner",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 361142,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the building taller than the clouds?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "building",
+      "object_b": "clouds",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 384661,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the knob wider than the grate?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "knob",
+      "object_b": "grate",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 384661,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the knob shorter than the shelf?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "knob",
+      "object_b": "shelf",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 384661,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the knob taller than the handle?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "knob",
+      "object_b": "handle",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 384661,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the knob wider than the shelf?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "knob",
+      "object_b": "shelf",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 384661,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the knob shorter than the building?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "knob",
+      "object_b": "building",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 47819,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the hair shorter than the horse tail?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "hair",
+      "object_b": "horse tail",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 47819,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the basket wider than the shoes?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "basket",
+      "object_b": "shoes",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 47819,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the horse shorter than the horse mane?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "horse",
+      "object_b": "horse mane",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 1993,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the dish larger than the table?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "dish",
+      "object_b": "table",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 1993,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the lamp shorter than the chair?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "lamp",
+      "object_b": "chair",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 1993,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the table bigger than the window?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "table",
+      "object_b": "window",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 1993,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the table larger than the glass?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "table",
+      "object_b": "glass",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 539962,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the table bigger than the building?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "table",
+      "object_b": "building",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 539962,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the table bigger than the brick?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "table",
+      "object_b": "brick",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 319935,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the room wider than the tile?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "room",
+      "object_b": "tile",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 319935,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the living room smaller than the tile?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "living room",
+      "object_b": "tile",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 157365,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the puddle shorter than the skateboard?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "puddle",
+      "object_b": "skateboard",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 321790,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the hair bigger than the hand?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "hair",
+      "object_b": "hand",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 194216,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the bear bigger than the tree?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "bear",
+      "object_b": "tree",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 194216,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tree larger than the bear?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tree",
+      "object_b": "bear",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 194216,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the bear smaller than the tree?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "bear",
+      "object_b": "tree",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 20571,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the mast taller than the mountains?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "mast",
+      "object_b": "mountains",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 20571,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the wheel house smaller than the house?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "wheel house",
+      "object_b": "house",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 223955,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tattoo bigger than the pony tail?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tattoo",
+      "object_b": "pony tail",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 223955,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the rubber band larger than the backyard?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "rubber band",
+      "object_b": "backyard",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 190307,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the mound larger than the kneecap?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "mound",
+      "object_b": "kneecap",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 546823,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the horse smaller than the window?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "horse",
+      "object_b": "window",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 546823,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the horse larger than the woman?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "horse",
+      "object_b": "woman",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 546823,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tree shorter than the planter?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tree",
+      "object_b": "planter",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 260657,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the grass taller than the background?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "grass",
+      "object_b": "background",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 98392,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the clock smaller than the street?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "clock",
+      "object_b": "street",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 98392,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tower bigger than the headlight?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tower",
+      "object_b": "headlight",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 98392,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the building wider than the sign?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "building",
+      "object_b": "sign",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 98392,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the building bigger than the traffic?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "building",
+      "object_b": "traffic",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 104619,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the giraffe bigger than the vegetation?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "giraffe",
+      "object_b": "vegetation",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 104619,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the rocks larger than the face?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "rocks",
+      "object_b": "face",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 188689,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the water smaller than the letters?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "water",
+      "object_b": "letters",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 107851,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the elephant taller than the grass?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "elephant",
+      "object_b": "grass",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 107851,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the grass wider than the tree?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "grass",
+      "object_b": "tree",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 5060,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the mirror larger than the switchplate?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "mirror",
+      "object_b": "switchplate",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 5060,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the hair bigger than the baseboard?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "hair",
+      "object_b": "baseboard",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 5060,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the shorts wider than the chair?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "shorts",
+      "object_b": "chair",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 513688,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the laptop larger than the paper?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "laptop",
+      "object_b": "paper",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 224664,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the hill taller than the kite?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "hill",
+      "object_b": "kite",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 39484,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the lamp post larger than the awning?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "lamp post",
+      "object_b": "awning",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 382088,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the container wider than the mane?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "container",
+      "object_b": "mane",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 382088,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the nostrils bigger than the rocks?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "nostrils",
+      "object_b": "rocks",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 10363,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the stool shorter than the bicycle?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "stool",
+      "object_b": "bicycle",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 151516,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the bird bigger than the wing?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "bird",
+      "object_b": "wing",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 151516,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the beak smaller than the water?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "beak",
+      "object_b": "water",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 151516,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the leaf smaller than the head?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "leaf",
+      "object_b": "head",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 446117,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the wood bigger than the ground?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "wood",
+      "object_b": "ground",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 245651,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the cake shorter than the paper?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "cake",
+      "object_b": "paper",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 565597,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the mushroom taller than the pizza?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "mushroom",
+      "object_b": "pizza",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 565597,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the meat bigger than the mushroom?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "meat",
+      "object_b": "mushroom",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 565597,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the crumbs smaller than the mushroom?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "crumbs",
+      "object_b": "mushroom",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 565597,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the mushroom larger than the oregano?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "mushroom",
+      "object_b": "oregano",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 227187,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the bird shorter than the banana?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "bird",
+      "object_b": "banana",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 227187,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the bird smaller than the banana?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "bird",
+      "object_b": "banana",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 227187,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the bird shorter than the leaf?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "bird",
+      "object_b": "leaf",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 227187,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the bird bigger than the leaf?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "bird",
+      "object_b": "leaf",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 227187,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the bird wider than the banana?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "bird",
+      "object_b": "banana",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 500464,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tile shorter than the medicine?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tile",
+      "object_b": "medicine",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 500464,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tile smaller than the handle?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tile",
+      "object_b": "handle",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 500464,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tile bigger than the container?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tile",
+      "object_b": "container",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 500464,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tile bigger than the towel?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tile",
+      "object_b": "towel",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 500464,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tile smaller than the cabinet?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tile",
+      "object_b": "cabinet",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 500464,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tile taller than the bathroom?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tile",
+      "object_b": "bathroom",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 500464,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tile larger than the wall?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tile",
+      "object_b": "wall",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 500464,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tile taller than the floor?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tile",
+      "object_b": "floor",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 414340,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the clock larger than the building?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "clock",
+      "object_b": "building",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 414340,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tower taller than the sign?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tower",
+      "object_b": "sign",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 414340,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tree wider than the cobble stone?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tree",
+      "object_b": "cobble stone",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 414340,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the sign shorter than the wall?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "sign",
+      "object_b": "wall",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 414340,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the pine tree wider than the wall?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "pine tree",
+      "object_b": "wall",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 414340,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the chimney taller than the window?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "chimney",
+      "object_b": "window",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 247917,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the grass bigger than the pants?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "grass",
+      "object_b": "pants",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 181421,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the boat smaller than the lady?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "boat",
+      "object_b": "lady",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 249219,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the trees wider than the trunk?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "trees",
+      "object_b": "trunk",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 374982,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the pizza larger than the straw?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "pizza",
+      "object_b": "straw",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 519764,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the chair shorter than the wall?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "chair",
+      "object_b": "wall",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 522713,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the island larger than the boat?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "island",
+      "object_b": "boat",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 522713,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the grass larger than the island?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "grass",
+      "object_b": "island",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 21903,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the elephant bigger than the vegetation?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "elephant",
+      "object_b": "vegetation",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 21903,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tree taller than the vegetation?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tree",
+      "object_b": "vegetation",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 144798,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the watering can smaller than the lever?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "watering can",
+      "object_b": "lever",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 144798,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the soap shorter than the floor?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "soap",
+      "object_b": "floor",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 581357,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the light bigger than the park?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "light",
+      "object_b": "park",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 207844,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tube smaller than the parasol?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tube",
+      "object_b": "parasol",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 207844,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the buildings wider than the shirt?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "buildings",
+      "object_b": "shirt",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 207844,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the buildings bigger than the parasol?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "buildings",
+      "object_b": "parasol",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 207844,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the buildings taller than the people?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "buildings",
+      "object_b": "people",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 207844,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the buildings larger than the beach?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "buildings",
+      "object_b": "beach",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 186422,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the bear larger than the plants?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "bear",
+      "object_b": "plants",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 186422,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the rocks taller than the head?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "rocks",
+      "object_b": "head",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 186422,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the grass smaller than the moss?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "grass",
+      "object_b": "moss",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 176799,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the poles bigger than the moves?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "poles",
+      "object_b": "moves",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 176799,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the pole shorter than the stairs?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "pole",
+      "object_b": "stairs",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 176799,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the palmtrees shorter than the bushes?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "palmtrees",
+      "object_b": "bushes",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 338428,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the glass window taller than the chain?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "glass window",
+      "object_b": "chain",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 154000,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the truck bigger than the fence?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "truck",
+      "object_b": "fence",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 154000,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the truck wider than the wiper?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "truck",
+      "object_b": "wiper",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 154000,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the wheel bigger than the crane?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "wheel",
+      "object_b": "crane",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 154000,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the wheel taller than the windshield?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "wheel",
+      "object_b": "windshield",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 154000,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the ladder shorter than the truck?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "ladder",
+      "object_b": "truck",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 154000,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the wheel smaller than the truck?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "wheel",
+      "object_b": "truck",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 154000,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tree smaller than the wiper?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tree",
+      "object_b": "wiper",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 154000,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the chain smaller than the windshield?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "chain",
+      "object_b": "windshield",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 154000,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tire taller than the wheel?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tire",
+      "object_b": "wheel",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 154000,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the ladder bigger than the crane?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "ladder",
+      "object_b": "crane",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 154000,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the hill wider than the ladder?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "hill",
+      "object_b": "ladder",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 530146,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the pickle taller than the meat?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "pickle",
+      "object_b": "meat",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 530146,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the pickle taller than the side?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "pickle",
+      "object_b": "side",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 530146,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the pickle bigger than the meat?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "pickle",
+      "object_b": "meat",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 530146,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the pickle wider than the meal?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "pickle",
+      "object_b": "meal",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 530146,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the pickle smaller than the bread roll?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "pickle",
+      "object_b": "bread roll",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 576052,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the horse wider than the shrub?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "horse",
+      "object_b": "shrub",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 576052,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the shrub wider than the background?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "shrub",
+      "object_b": "background",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 576052,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the river shorter than the snow?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "river",
+      "object_b": "snow",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 216497,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the door larger than the room?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "door",
+      "object_b": "room",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 344059,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the giraffes shorter than the pole?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "giraffes",
+      "object_b": "pole",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 344059,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the trees bigger than the stomach?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "trees",
+      "object_b": "stomach",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 344059,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the pole taller than the giraffes?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "pole",
+      "object_b": "giraffes",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 130386,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the sign bigger than the bikes?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "sign",
+      "object_b": "bikes",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 480122,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the kitchen larger than the oven?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "kitchen",
+      "object_b": "oven",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 110972,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the bear larger than the trees?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "bear",
+      "object_b": "trees",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 46048,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the pillow shorter than the toys?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "pillow",
+      "object_b": "toys",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 46048,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the switch taller than the wall?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "switch",
+      "object_b": "wall",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 213171,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the fence taller than the pants?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "fence",
+      "object_b": "pants",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 181542,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the lines wider than the stripe?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "lines",
+      "object_b": "stripe",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 564133,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the grass larger than the branch?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "grass",
+      "object_b": "branch",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 40083,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the umbrella smaller than the chair?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "umbrella",
+      "object_b": "chair",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 40083,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the boxes wider than the street?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "boxes",
+      "object_b": "street",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 40083,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the boxes larger than the writing?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "boxes",
+      "object_b": "writing",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 40083,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the vehicles smaller than the window?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "vehicles",
+      "object_b": "window",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 350054,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the christmas tree smaller than the stuffed animals?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "christmas tree",
+      "object_b": "stuffed animals",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 322844,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the grass shorter than the seat?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "grass",
+      "object_b": "seat",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 260106,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the pole taller than the horse?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "pole",
+      "object_b": "horse",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 384666,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the pole shorter than the snow?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "pole",
+      "object_b": "snow",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 384666,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the grate smaller than the person?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "grate",
+      "object_b": "person",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 17115,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the rock wider than the hoof?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "rock",
+      "object_b": "hoof",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 17115,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the fence bigger than the rock?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "fence",
+      "object_b": "rock",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 17115,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the hoof wider than the trees?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "hoof",
+      "object_b": "trees",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 17115,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the hoof taller than the leaves?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "hoof",
+      "object_b": "leaves",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 17115,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the hoof bigger than the zebra?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "hoof",
+      "object_b": "zebra",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 17115,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the hoof shorter than the fence?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "hoof",
+      "object_b": "fence",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 17115,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the hoof shorter than the backsides?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "hoof",
+      "object_b": "backsides",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 17115,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the hoof taller than the tail?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "hoof",
+      "object_b": "tail",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 17115,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the hoof smaller than the zebras?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "hoof",
+      "object_b": "zebras",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 17115,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the hoof bigger than the zebras?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "hoof",
+      "object_b": "zebras",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 17115,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the zebra butt bigger than the fence?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "zebra butt",
+      "object_b": "fence",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 17115,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the zebra butt larger than the fence?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "zebra butt",
+      "object_b": "fence",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 288042,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tree shorter than the walkway?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tree",
+      "object_b": "walkway",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 288042,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the trees larger than the pipe?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "trees",
+      "object_b": "pipe",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 288042,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the wall larger than the lamp post?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "wall",
+      "object_b": "lamp post",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 167128,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the elephant taller than the tail?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "elephant",
+      "object_b": "tail",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 167128,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the elephant shorter than the tusk?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "elephant",
+      "object_b": "tusk",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 167128,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tusk wider than the grass?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tusk",
+      "object_b": "grass",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 167128,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tusk wider than the elephant?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tusk",
+      "object_b": "elephant",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 167128,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the grass taller than the tusk?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "grass",
+      "object_b": "tusk",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 153529,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the suitcase smaller than the tracks?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "suitcase",
+      "object_b": "tracks",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 153529,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the luggage smaller than the woman?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "luggage",
+      "object_b": "woman",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 153529,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the luggage smaller than the tracks?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "luggage",
+      "object_b": "tracks",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 153529,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the woman shorter than the luggage?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "woman",
+      "object_b": "luggage",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 153529,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the blue bag bigger than the railroad station?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "blue bag",
+      "object_b": "railroad station",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 507893,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the cupboard smaller than the tile?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "cupboard",
+      "object_b": "tile",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 507893,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the knob wider than the cupboard?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "knob",
+      "object_b": "cupboard",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 507893,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tile smaller than the border?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tile",
+      "object_b": "border",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 507893,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tile larger than the bathroom?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tile",
+      "object_b": "bathroom",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 357238,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the wave smaller than the beach?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "wave",
+      "object_b": "beach",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 227686,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the horse taller than the woods?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "horse",
+      "object_b": "woods",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 167159,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the eyes smaller than the pinafore?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "eyes",
+      "object_b": "pinafore",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 167159,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the book smaller than the border?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "book",
+      "object_b": "border",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 7511,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tent taller than the shoreline?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tent",
+      "object_b": "shoreline",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 7511,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the lake wider than the pinwheel?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "lake",
+      "object_b": "pinwheel",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 7511,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the buildings taller than the shoreline?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "buildings",
+      "object_b": "shoreline",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 7511,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the clouds smaller than the shoreline?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "clouds",
+      "object_b": "shoreline",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 247806,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the building shorter than the pole?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "building",
+      "object_b": "pole",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 247806,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tower shorter than the hole?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tower",
+      "object_b": "hole",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 189310,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the picture taller than the window?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "picture",
+      "object_b": "window",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 189310,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the doorway bigger than the lampshade?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "doorway",
+      "object_b": "lampshade",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 70774,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the metal rack smaller than the helmet?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "metal rack",
+      "object_b": "helmet",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 331569,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the glass shorter than the plant?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "glass",
+      "object_b": "plant",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 364557,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the building shorter than the back?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "building",
+      "object_b": "back",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 364557,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the wave wider than the windows?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "wave",
+      "object_b": "windows",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 146489,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the case wider than the graphic?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "case",
+      "object_b": "graphic",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 139077,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the television bigger than the sock?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "television",
+      "object_b": "sock",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 139077,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the child shorter than the shelf?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "child",
+      "object_b": "shelf",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 268729,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tree bigger than the stripes?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tree",
+      "object_b": "stripes",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 184611,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the sign larger than the banner?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "sign",
+      "object_b": "banner",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 433103,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the window wider than the yellow shirt?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "window",
+      "object_b": "yellow shirt",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 91619,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the pole taller than the sticker?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "pole",
+      "object_b": "sticker",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 91619,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the sign smaller than the bolts?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "sign",
+      "object_b": "bolts",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 16958,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the table wider than the tools?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "table",
+      "object_b": "tools",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 16958,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the frame bigger than the living room?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "frame",
+      "object_b": "living room",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 16958,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the irons shorter than the lamp?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "irons",
+      "object_b": "lamp",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 16958,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the furniture shorter than the book?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "furniture",
+      "object_b": "book",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 107339,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the window shorter than the wall?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "window",
+      "object_b": "wall",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 354547,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the grass smaller than the door?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "grass",
+      "object_b": "door",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 354547,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the hair wider than the grass?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "hair",
+      "object_b": "grass",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 348488,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the staff wider than the collar?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "staff",
+      "object_b": "collar",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 167572,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the fork shorter than the napkin?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "fork",
+      "object_b": "napkin",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 425227,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the kite bigger than the waters?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "kite",
+      "object_b": "waters",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 19924,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the watch larger than the spots?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "watch",
+      "object_b": "spots",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 19924,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the smile shorter than the lace?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "smile",
+      "object_b": "lace",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 94751,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the building larger than the traffic light?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "building",
+      "object_b": "traffic light",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 94751,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the streetlamp taller than the pole?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "streetlamp",
+      "object_b": "pole",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 94751,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the windows taller than the roof?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "windows",
+      "object_b": "roof",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 155341,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the truck wider than the tree?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "truck",
+      "object_b": "tree",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 155341,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tree taller than the sidewalk?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tree",
+      "object_b": "sidewalk",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 155341,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the equipment bigger than the sign?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "equipment",
+      "object_b": "sign",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 282912,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the rock smaller than the horns?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "rock",
+      "object_b": "horns",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 282912,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the moss wider than the exhibit?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "moss",
+      "object_b": "exhibit",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 282912,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the leaves wider than the trees?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "leaves",
+      "object_b": "trees",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 417085,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the cows wider than the light pole?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "cows",
+      "object_b": "light pole",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 417085,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the streetlight bigger than the road?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "streetlight",
+      "object_b": "road",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 417085,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the animal wider than the clouds?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "animal",
+      "object_b": "clouds",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 579818,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the clouds shorter than the powerlines?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "clouds",
+      "object_b": "powerlines",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 505573,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the bowtie shorter than the eyes?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "bowtie",
+      "object_b": "eyes",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 505573,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the head wider than the bowtie?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "head",
+      "object_b": "bowtie",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 529939,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the surfboard wider than the rack?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "surfboard",
+      "object_b": "rack",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 529939,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the wakeboard larger than the weeds?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "wakeboard",
+      "object_b": "weeds",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 529939,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the surfboard taller than the rack?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "surfboard",
+      "object_b": "rack",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 529939,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the surfboard smaller than the building?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "surfboard",
+      "object_b": "building",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 552371,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the fenced larger than the mane?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "fenced",
+      "object_b": "mane",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 56288,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the lettuce bigger than the pepper?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "lettuce",
+      "object_b": "pepper",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 56288,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the orange shorter than the computer?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "orange",
+      "object_b": "computer",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 56288,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the sandwich bigger than the orange?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "sandwich",
+      "object_b": "orange",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 290833,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the zebra larger than the hoof?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "zebra",
+      "object_b": "hoof",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 290833,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the zebra shorter than the grass?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "zebra",
+      "object_b": "grass",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 290833,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tail shorter than the hoof?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tail",
+      "object_b": "hoof",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 290833,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the rock wider than the hoof?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "rock",
+      "object_b": "hoof",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 163682,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the neck tie bigger than the pants?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "neck tie",
+      "object_b": "pants",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 163682,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the picture window bigger than the cuffs?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "picture window",
+      "object_b": "cuffs",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 52507,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the wave wider than the spray?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "wave",
+      "object_b": "spray",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 379533,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the elephant taller than the head?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "elephant",
+      "object_b": "head",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 125405,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the rock shorter than the eyebrow?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "rock",
+      "object_b": "eyebrow",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 125405,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the rock larger than the tongue?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "rock",
+      "object_b": "tongue",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 561679,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the sign larger than the roof?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "sign",
+      "object_b": "roof",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 106281,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the building shorter than the graffiti?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "building",
+      "object_b": "graffiti",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 490413,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the fence taller than the grass?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "fence",
+      "object_b": "grass",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 490413,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the plane taller than the stripes?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "plane",
+      "object_b": "stripes",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 450439,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the kite wider than the streamers?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "kite",
+      "object_b": "streamers",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 176847,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the leaves wider than the group?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "leaves",
+      "object_b": "group",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 176847,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the bird smaller than the berries?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "bird",
+      "object_b": "berries",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 176847,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the group larger than the branches?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "group",
+      "object_b": "branches",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 176847,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the group larger than the bird?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "group",
+      "object_b": "bird",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 176847,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the group smaller than the berries?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "group",
+      "object_b": "berries",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 176847,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the group taller than the leaves?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "group",
+      "object_b": "leaves",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 176847,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the group bigger than the tail feathers?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "group",
+      "object_b": "tail feathers",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 172856,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the rock formation wider than the tile?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "rock formation",
+      "object_b": "tile",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 172856,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the chimney smaller than the wire?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "chimney",
+      "object_b": "wire",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 519522,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tower wider than the light?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tower",
+      "object_b": "light",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 532575,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the ocean taller than the pole?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "ocean",
+      "object_b": "pole",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 79034,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the trunk smaller than the ground?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "trunk",
+      "object_b": "ground",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 79034,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the snow taller than the trees?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "snow",
+      "object_b": "trees",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 79034,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the evergreen bigger than the background?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "evergreen",
+      "object_b": "background",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 79034,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the sticks taller than the snow?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "sticks",
+      "object_b": "snow",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 520077,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the gargoyle figurine bigger than the pages?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "gargoyle figurine",
+      "object_b": "pages",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 565989,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the kangaroo statue wider than the wall?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "kangaroo statue",
+      "object_b": "wall",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 565989,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the penguin statue larger than the bell?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "penguin statue",
+      "object_b": "bell",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 565989,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the elephant statue wider than the website?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "elephant statue",
+      "object_b": "website",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 210915,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the wave taller than the shirtless?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "wave",
+      "object_b": "shirtless",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 70254,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the light bigger than the purse?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "light",
+      "object_b": "purse",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 70254,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the light bigger than the gravel?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "light",
+      "object_b": "gravel",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 70254,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the light taller than the track?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "light",
+      "object_b": "track",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 70254,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the shirt wider than the light?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "shirt",
+      "object_b": "light",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 70254,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the sign smaller than the woman?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "sign",
+      "object_b": "woman",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 318114,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the slice bigger than the plate?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "slice",
+      "object_b": "plate",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 318114,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the plate wider than the table?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "plate",
+      "object_b": "table",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 318114,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the glass bigger than the food?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "glass",
+      "object_b": "food",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 51738,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the window larger than the suitcase?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "window",
+      "object_b": "suitcase",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 580294,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the sunflowers larger than the smoke?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "sunflowers",
+      "object_b": "smoke",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 395903,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the wave larger than the wetsuit?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "wave",
+      "object_b": "wetsuit",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 395903,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the wave taller than the board?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "wave",
+      "object_b": "board",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 349302,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the giraffe shorter than the bush?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "giraffe",
+      "object_b": "bush",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 359855,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the twigs wider than the latch?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "twigs",
+      "object_b": "latch",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 405691,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the loaf bigger than the plant?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "loaf",
+      "object_b": "plant",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 267940,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the boat wider than the letter?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "boat",
+      "object_b": "letter",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 267940,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the house bigger than the mountain?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "house",
+      "object_b": "mountain",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 242060,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the cakes larger than the glasses?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "cakes",
+      "object_b": "glasses",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 242060,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the plate shorter than the butter?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "plate",
+      "object_b": "butter",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 488664,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the houses larger than the chimney?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "houses",
+      "object_b": "chimney",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 488664,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the trees wider than the stripe?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "trees",
+      "object_b": "stripe",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 488664,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the guard rail shorter than the houses?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "guard rail",
+      "object_b": "houses",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 488664,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the trees larger than the track?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "trees",
+      "object_b": "track",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 320696,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the wave larger than the waves?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "wave",
+      "object_b": "waves",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 210502,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the window shorter than the door?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "window",
+      "object_b": "door",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 509014,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tree taller than the goggles?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tree",
+      "object_b": "goggles",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 577959,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the kite smaller than the streamer?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "kite",
+      "object_b": "streamer",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 458755,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the hair bigger than the jeans?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "hair",
+      "object_b": "jeans",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 343561,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the pack wider than the biker?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "pack",
+      "object_b": "biker",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 341973,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the sunglasses bigger than the hedge?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "sunglasses",
+      "object_b": "hedge",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 447342,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the vehicle wider than the signs?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "vehicle",
+      "object_b": "signs",
+      "size_word": "wider",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 447342,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the buildings bigger than the pole?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "buildings",
+      "object_b": "pole",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 332318,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the tree larger than the fence?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "tree",
+      "object_b": "fence",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 332318,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the trailer larger than the pasture?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "trailer",
+      "object_b": "pasture",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 204329,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the hills taller than the wave?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "hills",
+      "object_b": "wave",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 386457,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the window larger than the nose?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "window",
+      "object_b": "nose",
+      "size_word": "larger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 386457,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the door bigger than the markings?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "door",
+      "object_b": "markings",
+      "size_word": "bigger",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 501243,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the smaller zebra shorter than the front legs?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "smaller zebra",
+      "object_b": "front legs",
+      "size_word": "shorter",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 501243,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the zebra smaller than the one pointed hoof?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "zebra",
+      "object_b": "one pointed hoof",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 76416,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Is the lamppost taller than the tile?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "lamppost",
+      "object_b": "tile",
+      "size_word": "taller",
+      "needs_verification": true
+    }
+  },
+  {
+    "image_id": 117197,
+    "category": "H2",
+    "subcategory": "H2b",
+    "question": "Are the bushes smaller than the hand?",
+    "ground_truth": "ambiguous",
+    "difficulty": "hard",
+    "metadata": {
+      "object_a": "bushes",
+      "object_b": "hand",
+      "size_word": "smaller",
+      "needs_verification": true
+    }
+  }
+]
