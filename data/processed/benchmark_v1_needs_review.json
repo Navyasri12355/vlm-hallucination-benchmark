@@ -196,20 +196,6 @@
     }
   },
   {
-    "image_id": 42276,
-    "category": "H2",
-    "subcategory": "H2b",
-    "question": "Is the foot stool shorter than the bad sentence?",
-    "ground_truth": "ambiguous",
-    "difficulty": "hard",
-    "metadata": {
-      "object_a": "foot stool",
-      "object_b": "bad sentence",
-      "size_word": "shorter",
-      "needs_verification": true
-    }
-  },
-  {
     "image_id": 367680,
     "category": "H2",
     "subcategory": "H2b",
@@ -248,20 +234,6 @@
       "object_a": "tree",
       "object_b": "window",
       "size_word": "smaller",
-      "needs_verification": true
-    }
-  },
-  {
-    "image_id": 571313,
-    "category": "H2",
-    "subcategory": "H2b",
-    "question": "Is the fridge taller than the several items?",
-    "ground_truth": "ambiguous",
-    "difficulty": "hard",
-    "metadata": {
-      "object_a": "fridge",
-      "object_b": "several items",
-      "size_word": "taller",
       "needs_verification": true
     }
   },
@@ -3416,20 +3388,6 @@
     }
   },
   {
-    "image_id": 323751,
-    "category": "H2",
-    "subcategory": "H2b",
-    "question": "Is the tall vegetation taller than the person waiting?",
-    "ground_truth": "ambiguous",
-    "difficulty": "hard",
-    "metadata": {
-      "object_a": "tall vegetation",
-      "object_b": "person waiting",
-      "size_word": "taller",
-      "needs_verification": true
-    }
-  },
-  {
     "image_id": 153529,
     "category": "H2",
     "subcategory": "H2b",
@@ -3860,20 +3818,6 @@
       "object_a": "window",
       "object_b": "yellow shirt",
       "size_word": "wider",
-      "needs_verification": true
-    }
-  },
-  {
-    "image_id": 91619,
-    "category": "H2",
-    "subcategory": "H2b",
-    "question": "Is the pole larger than the removed?",
-    "ground_truth": "ambiguous",
-    "difficulty": "hard",
-    "metadata": {
-      "object_a": "pole",
-      "object_b": "removed",
-      "size_word": "larger",
       "needs_verification": true
     }
   },
@@ -5250,20 +5194,6 @@
     }
   },
   {
-    "image_id": 223738,
-    "category": "H2",
-    "subcategory": "H2b",
-    "question": "Is the small patch of grass larger than the blue white helmet?",
-    "ground_truth": "ambiguous",
-    "difficulty": "hard",
-    "metadata": {
-      "object_a": "small patch of grass",
-      "object_b": "blue white helmet",
-      "size_word": "larger",
-      "needs_verification": true
-    }
-  },
-  {
     "image_id": 577959,
     "category": "H2",
     "subcategory": "H2b",
@@ -5288,20 +5218,6 @@
       "object_a": "hair",
       "object_b": "jeans",
       "size_word": "bigger",
-      "needs_verification": true
-    }
-  },
-  {
-    "image_id": 458755,
-    "category": "H2",
-    "subcategory": "H2b",
-    "question": "Is the sheep wider than the someon?",
-    "ground_truth": "ambiguous",
-    "difficulty": "hard",
-    "metadata": {
-      "object_a": "sheep",
-      "object_b": "someon",
-      "size_word": "wider",
       "needs_verification": true
     }
   },
@@ -5428,34 +5344,6 @@
       "object_a": "door",
       "object_b": "markings",
       "size_word": "bigger",
-      "needs_verification": true
-    }
-  },
-  {
-    "image_id": 501243,
-    "category": "H2",
-    "subcategory": "H2b",
-    "question": "Are the big zebras taller than the front legs?",
-    "ground_truth": "ambiguous",
-    "difficulty": "hard",
-    "metadata": {
-      "object_a": "big zebras",
-      "object_b": "front legs",
-      "size_word": "taller",
-      "needs_verification": true
-    }
-  },
-  {
-    "image_id": 501243,
-    "category": "H2",
-    "subcategory": "H2b",
-    "question": "Is the tall fence taller than the black zebra nose?",
-    "ground_truth": "ambiguous",
-    "difficulty": "hard",
-    "metadata": {
-      "object_a": "tall fence",
-      "object_b": "black zebra nose",
-      "size_word": "taller",
       "needs_verification": true
     }
   },
