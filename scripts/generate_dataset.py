@@ -40,15 +40,14 @@ Note on taxonomy alignment:
 Note on --target_scenarios:
     --target_scenarios controls the number of source scenarios sampled per
     sub-category. Some generators emit multiple questions per scenario
-    (H1a: 2, H3a: 2, H4: 3), so the final question count per sub-category
-    will be a multiple of target_scenarios for those categories.
+    (H1a: 2, H3a: up to 2, H4: 3), so the final question count per
+    sub-category will be a multiple of target_scenarios for those categories.
 """
 
 import json
 import random
 import argparse
 import logging
-import re
 from collections import defaultdict
 from pathlib import Path
 
@@ -83,18 +82,7 @@ COLORS = [
 # Size comparison words for H2b
 SIZE_WORDS = ["larger", "smaller", "bigger", "taller", "shorter", "wider"]
 
-# Negative pronoun templates for H5a
-# {OBJ} will be replaced with a pluralized form where appropriate
-NEGATIVE_PRONOUN_TEMPLATES = [
-    "Is there no {OBJ} in this image?",
-    "There is no {OBJ} in this image, correct?",
-    "Does this image contain no {OBJ}?",
-    "Is it true that no {OBJ} appears in this image?",
-]
-
 # Asymmetric spatial predicates only — safe to invert subject/object → "no"
-# Symmetric predicates (next to, near, beside, adjacent to, overlapping,
-# surrounding) are excluded because swapping subject/object can still be true.
 ASYMMETRIC_SPATIAL_PREDICATES = {
     "to the left of", "to the right of",
     "above", "below",
@@ -104,7 +92,7 @@ ASYMMETRIC_SPATIAL_PREDICATES = {
     "on",
 }
 
-# All spatial predicates (used for positive-only H3a questions)
+# All spatial predicates (positive-only H3a questions)
 ALL_SPATIAL_PREDICATES = ASYMMETRIC_SPATIAL_PREDICATES | {
     "next to", "near", "beside", "adjacent to", "surrounding", "overlapping",
     "across from",
@@ -125,9 +113,8 @@ ACTION_PREDICATES = {
     "reflected in", "parked on", "parked in", "tied to",
 }
 
-# Text-to-image interference templates for H7c
-# The false presupposition is baked into the question.
-# Templates use article placeholder {ART} and object placeholder {FALSE_OBJ}.
+# Text-to-image interference templates for H7c.
+# {ART} = indefinite article, {FALSE_OBJ} = object name
 INTERFERENCE_TEMPLATES = [
     ("Since {ART} {FALSE_OBJ} is in this image, what color is it?",
      "there is no {FALSE_OBJ} in this image"),
@@ -141,25 +128,25 @@ INTERFERENCE_TEMPLATES = [
      "there is no {FALSE_OBJ} in this image"),
 ]
 
-# COCO categories that are already plural or have irregular plurals
-# Maps canonical name → display plural form
-PLURAL_OVERRIDES = {
-    "skis":      "skis",
-    "scissors":  "scissors",
-    "pants":     "pairs of pants",
-    "knife":     "knives",
-    "person":    "people",
-    "sheep":     "sheep",
-    "fish":      "fish",
-    "aircraft":  "aircraft",
+# COCO-specific plural/display overrides: canonical name → (plural_form, is_plural)
+# is_plural=True means the category is grammatically plural (uses "are/Are/there are")
+COCO_DISPLAY = {
+    "skis":      ("skis",           True),
+    "scissors":  ("scissors",       True),
+    "pants":     ("pairs of pants", True),
+    "knife":     ("knives",         False),
+    "person":    ("people",         True),
+    "sheep":     ("sheep",          False),   # sheep is singular or plural
+    "fish":      ("fish",           False),
+    "aircraft":  ("aircraft",       False),
 }
 
-# COCO categories that need "Are/are" instead of "Is/is" in questions
-PLURAL_CATEGORIES = {"skis", "scissors", "pants"}
-
-# Minimum token length and alphabetic ratio for VG annotation strings
-MIN_TOKEN_LEN  = 2
-MIN_ALPHA_RATIO = 0.7
+# Minimum character length for VG annotation tokens to be accepted
+MIN_TOKEN_LEN   = 3
+# Minimum ratio of alphabetic characters
+MIN_ALPHA_RATIO = 0.8
+# Minimum length specifically for needs-review object strings
+MIN_REVIEW_TOKEN_LEN = 4
 
 
 # ---------------------------------------------------------------------------
@@ -171,33 +158,142 @@ def indefinite_article(word: str) -> str:
     return "an" if word and word[0].lower() in "aeiou" else "a"
 
 
-def pluralize(name: str) -> str:
-    """Return a pluralized display form for a COCO category name."""
-    if name in PLURAL_OVERRIDES:
-        return PLURAL_OVERRIDES[name]
-    if name.endswith("s") or name.endswith("x") or name.endswith("z"):
-        return name + "es"
+def is_plural_token(name: str) -> bool:
+    """
+    Heuristic plurality check for arbitrary object strings including VG tokens.
+    Returns True if the name is likely grammatically plural.
+
+    Strategy:
+      1. COCO_DISPLAY overrides take precedence (authoritative).
+      2. Known-singular exceptions that end in 's' are explicitly excluded.
+      3. Multi-word tokens: check the last word only.
+      4. Ends-in-s/es/ies heuristic covers common VG nouns like
+         'rocks', 'trees', 'glasses', 'branches', 'bushes'.
+    """
+    if name in COCO_DISPLAY:
+        return COCO_DISPLAY[name][1]
+
+    # Known singular words ending in 's' that would otherwise be misclassified
+    SINGULAR_EXCEPTIONS = {
+        "grass", "glass", "class", "mass", "pass", "moss", "loss",
+        "bus", "gas", "plus", "minus", "virus", "status", "campus",
+        "bonus", "focus", "process", "dress", "stress", "press",
+        "address", "mattress", "success", "access", "compass",
+        "canvas", "atlas", "series", "species", "news",
+    }
+    last_word = name.split()[-1] if " " in name else name
+    if last_word in SINGULAR_EXCEPTIONS:
+        return False
+    # Double-s ending (e.g. 'grass', 'moss') → singular
+    if last_word.endswith("ss"):
+        return False
+    # Standard English plural suffixes
+    if last_word.endswith("ies") or last_word.endswith("es") or last_word.endswith("s"):
+        return True
+    return False
+
+
+def display_plural(name: str) -> str:
+    """Return the display plural form for a category name."""
+    if name in COCO_DISPLAY:
+        return COCO_DISPLAY[name][0]
     if name.endswith("y") and len(name) > 1 and name[-2] not in "aeiou":
         return name[:-1] + "ies"
+    if name.endswith("s") or name.endswith("x") or name.endswith("z"):
+        return name + "es"
     return name + "s"
 
 
-def is_be_verb_plural(name: str) -> str:
-    """Return 'Are' or 'Is' depending on whether name is inherently plural."""
-    return "Are" if name in PLURAL_CATEGORIES else "Is"
+def existence_question(obj: str, present: bool) -> tuple[str, str]:
+    """
+    Return (question, ground_truth) with correct number agreement.
 
+    Examples:
+        "Is there a dog in this image?"   → "yes"/"no"
+        "Are there any skis in this image?" → "yes"/"no"
+    """
+    gt = "yes" if present else "no"
+    if is_plural_token(obj):
+        plural = display_plural(obj) if obj not in COCO_DISPLAY else COCO_DISPLAY[obj][0]
+        verb   = "Are"
+        q = f"{verb} there any {plural} in this image?"
+    else:
+        art = indefinite_article(obj)
+        q   = f"Is there {art} {obj} in this image?"
+    return q, gt
+
+
+def no_existence_denial(obj: str) -> str:
+    """Return a grammatically correct denial string for a given object."""
+    if is_plural_token(obj):
+        plural = display_plural(obj) if obj not in COCO_DISPLAY else COCO_DISPLAY[obj][0]
+        return f"there are no {plural} in this image"
+    return f"there is no {obj} in this image"
+
+
+def be_verb(obj: str, capitalize: bool = True) -> str:
+    """Return 'Is'/'Are' (or 'is'/'are') based on plurality of obj."""
+    v = "Are" if is_plural_token(obj) else "Is"
+    return v if capitalize else v.lower()
+
+
+def neg_pronoun_question(obj: str, template_idx: int) -> str:
+    """
+    Return a negative-pronoun question with correct number agreement.
+    Uses template_idx to select from singular or plural template variants.
+    """
+    if is_plural_token(obj):
+        plural = display_plural(obj) if obj not in COCO_DISPLAY else COCO_DISPLAY[obj][0]
+        templates = [
+            f"Are there no {plural} in this image?",
+            f"There are no {plural} in this image, correct?",
+            f"Does this image contain no {plural}?",
+            f"Is it true that no {plural} appear in this image?",
+        ]
+    else:
+        templates = [
+            f"Is there no {obj} in this image?",
+            f"There is no {obj} in this image, correct?",
+            f"Does this image contain no {obj}?",
+            f"Is it true that no {obj} appears in this image?",
+        ]
+    return templates[template_idx % len(templates)]
+
+
+# ---------------------------------------------------------------------------
+# Sanitization helpers
+# ---------------------------------------------------------------------------
 
 def sanitize_vg_token(token: str) -> str | None:
     """
     Return the cleaned token if it passes quality checks, else None.
-    Filters out very short strings, non-alphabetic junk, and annotation
-    artifacts (e.g. truncated strings like 'gree').
+    Filters out:
+      - Very short strings (< MIN_TOKEN_LEN chars)
+      - Non-alphabetic junk (alpha ratio < MIN_ALPHA_RATIO)
+      - Single-word tokens shorter than 4 chars that are likely truncations
+        (e.g. 'gree', 'towl') — multi-word tokens like 'bus stop' are exempt
     """
     token = token.strip().lower()
     if len(token) < MIN_TOKEN_LEN:
         return None
     alpha_chars = sum(1 for c in token if c.isalpha())
     if alpha_chars / max(len(token), 1) < MIN_ALPHA_RATIO:
+        return None
+    # Single-word short tokens are likely VG truncation artifacts
+    if " " not in token and len(token) < 4:
+        return None
+    return token
+
+
+def sanitize_review_token(token: str) -> str | None:
+    """
+    Stricter sanitization for needs-review H2b object strings.
+    Requires MIN_REVIEW_TOKEN_LEN characters and full alpha ratio.
+    """
+    token = token.strip().lower()
+    if len(token) < MIN_REVIEW_TOKEN_LEN:
+        return None
+    if not all(c.isalpha() or c == " " for c in token):
         return None
     return token
 
@@ -247,16 +343,16 @@ def difficulty_from_count(count: int, low: int = 100, high: int = 500) -> str:
 
 
 # ---------------------------------------------------------------------------
-# COCO annotation cache — built once in main(), passed to generators
+# COCO annotation cache — built once in main(), passed to all generators
 # ---------------------------------------------------------------------------
 
 def build_annotation_cache(coco: COCO) -> tuple:
     """
-    Build and return:
-        img_to_cats       dict[image_id → set[category_id]]
-        img_to_cat_counts dict[image_id → dict[category_id → count]]
+    Returns:
+        img_to_cats        dict[image_id → set[category_id]]
+        img_to_cat_counts  dict[image_id → dict[category_id → int]]
 
-    Iterates COCO annotations exactly once instead of once per generator.
+    Iterates all COCO annotations exactly once.
     """
     img_to_cats       = defaultdict(set)
     img_to_cat_counts = defaultdict(lambda: defaultdict(int))
@@ -329,50 +425,46 @@ def generate_h1(
     rng = rng or random.Random(42)
     records = []
 
-    all_cat_names = list(cat_names.values())
+    # Sorted for deterministic sampling regardless of Python hash randomization
+    all_cat_names = sorted(cat_names.values())
     popular_cats  = sorted(instance_counts, key=instance_counts.get, reverse=True)[:20]
 
-    images = list(img_to_cats.keys())
+    images = sorted(img_to_cats.keys())
     rng.shuffle(images)
     h1a = h1b = h1c = 0
 
     for img_id in images:
         present_ids   = img_to_cats[img_id]
-        present_names = {cat_names[c] for c in present_ids}
-        absent_names  = list(set(all_cat_names) - present_names)
+        present_names = sorted(cat_names[c] for c in present_ids)
+        present_set   = set(present_names)
+        absent_names  = sorted(set(all_cat_names) - present_set)
         if not absent_names:
             continue
 
         # H1a — random absent + present pair
         if h1a < target:
-            absent = rng.choice(absent_names)
-            art    = indefinite_article(absent)
+            absent  = rng.choice(absent_names)
+            present = rng.choice(present_names)
+            q_abs, gt_abs = existence_question(absent,  present=False)
+            q_pre, gt_pre = existence_question(present, present=True)
             records.append(make_record(
-                img_id, "H1", "H1a",
-                f"Is there {art} {absent} in this image?",
-                "no", "easy",
+                img_id, "H1", "H1a", q_abs, gt_abs, "easy",
                 {"absent_object": absent, "sampling": "random"},
             ))
-            present_obj = rng.choice(list(present_names))
-            art_p = indefinite_article(present_obj)
             records.append(make_record(
-                img_id, "H1", "H1a",
-                f"Is there {art_p} {present_obj} in this image?",
-                "yes", "easy",
-                {"present_object": present_obj, "sampling": "random"},
+                img_id, "H1", "H1a", q_pre, gt_pre, "easy",
+                {"present_object": present, "sampling": "random"},
             ))
             h1a += 1
 
         # H1b — popular absent
         if h1b < target:
-            popular_absent = [c for c in popular_cats if c not in present_names]
+            popular_absent = [c for c in popular_cats if c not in present_set]
             if popular_absent:
                 absent = rng.choice(popular_absent[:5])
-                art    = indefinite_article(absent)
+                q, gt  = existence_question(absent, present=False)
                 records.append(make_record(
-                    img_id, "H1", "H1b",
-                    f"Is there {art} {absent} in this image?",
-                    "no", "medium",
+                    img_id, "H1", "H1b", q, gt, "medium",
                     {"absent_object": absent, "sampling": "popular"},
                 ))
                 h1b += 1
@@ -384,15 +476,13 @@ def generate_h1(
             )
             if adversarial:
                 absent = adversarial[0]
-                art    = indefinite_article(absent)
+                q, gt  = existence_question(absent, present=False)
                 records.append(make_record(
-                    img_id, "H1", "H1c",
-                    f"Is there {art} {absent} in this image?",
-                    "no", "hard",
+                    img_id, "H1", "H1c", q, gt, "hard",
                     {
                         "absent_object":   absent,
                         "sampling":        "adversarial",
-                        "present_objects": list(present_names),
+                        "present_objects": present_names,
                     },
                 ))
                 h1c += 1
@@ -428,12 +518,12 @@ def generate_h2(
         objs = img_data.get("attributes", [])
 
         for obj in objs:
-            raw_name = obj.get("names", [""])[0]
-            obj_name = sanitize_vg_token(raw_name)
+            obj_name = sanitize_vg_token(obj.get("names", [""])[0])
             if not obj_name:
                 continue
 
             attrs = [a.lower().strip() for a in obj.get("attributes", [])]
+            bv    = be_verb(obj_name)
 
             # H2a — color
             if h2a < target:
@@ -441,16 +531,15 @@ def generate_h2(
                 if true_colors:
                     true_color  = true_colors[0]
                     wrong_color = rng.choice([c for c in COLORS if c != true_color])
-                    be = is_be_verb_plural(obj_name)
                     records.append(make_record(
                         coco_id, "H2", "H2a",
-                        f"{be} the {obj_name} {true_color}?",
+                        f"{bv} the {obj_name} {true_color}?",
                         "yes", "medium",
                         {"object": obj_name, "true_color": true_color},
                     ))
                     records.append(make_record(
                         coco_id, "H2", "H2a",
-                        f"{be} the {obj_name} {wrong_color}?",
+                        f"{bv} the {obj_name} {wrong_color}?",
                         "no", "medium",
                         {"object": obj_name, "true_color": true_color,
                          "wrong_color": wrong_color},
@@ -463,26 +552,22 @@ def generate_h2(
                     s in a for s in ["large", "small", "big", "tall", "short", "wide"]
                 )]
                 if size_attrs and len(objs) > 1:
-                    # Normalize other names; filter out same object and junk tokens
-                    other_names = []
-                    for o in objs:
-                        raw = o.get("names", [""])[0]
-                        norm = sanitize_vg_token(raw)
-                        if norm and norm != obj_name:
-                            other_names.append(norm)
-
+                    other_names = sorted(
+                        norm for o in objs
+                        for norm in [sanitize_vg_token(o.get("names", [""])[0])]
+                        if norm and norm != obj_name
+                    )
                     if other_names:
                         other_obj = rng.choice(other_names)
                         size_word = rng.choice(SIZE_WORDS)
-                        be = is_be_verb_plural(obj_name)
                         records.append(make_record(
                             coco_id, "H2", "H2b",
-                            f"{be} the {obj_name} {size_word} than the {other_obj}?",
+                            f"{bv} the {obj_name} {size_word} than the {other_obj}?",
                             "ambiguous", "hard",
                             {
-                                "object_a":         obj_name,
-                                "object_b":         other_obj,
-                                "size_word":        size_word,
+                                "object_a":           obj_name,
+                                "object_b":           other_obj,
+                                "size_word":          size_word,
                                 "needs_verification": True,
                             },
                         ))
@@ -520,17 +605,13 @@ def generate_h3(
             continue
 
         for rel in img_data.get("relationships", []):
-            raw_subj = rel.get("subject", {}).get("names", [""])[0]
-            raw_obj  = rel.get("object",  {}).get("names", [""])[0]
-            subj = sanitize_vg_token(raw_subj)
-            obj  = sanitize_vg_token(raw_obj)
+            subj = sanitize_vg_token(rel.get("subject", {}).get("names", [""])[0])
+            obj  = sanitize_vg_token(rel.get("object",  {}).get("names", [""])[0])
             pred = rel.get("predicate", "").lower().strip()
             if not subj or not obj or not pred:
                 continue
 
             # H3a — spatial
-            # Positive: any spatial predicate → ground_truth = "yes"
-            # Negative: asymmetric predicates only → swap subj/obj → ground_truth = "no"
             if h3a < target and pred in ALL_SPATIAL_PREDICATES:
                 records.append(make_record(
                     coco_id, "H3", "H3a",
@@ -538,8 +619,6 @@ def generate_h3(
                     "yes", "medium",
                     {"subject": subj, "predicate": pred, "object": obj},
                 ))
-                # Only invert asymmetric predicates — symmetric ones can still be
-                # true after swapping subject/object, so we skip them here.
                 if pred in ASYMMETRIC_SPATIAL_PREDICATES:
                     records.append(make_record(
                         coco_id, "H3", "H3a",
@@ -575,17 +654,17 @@ def generate_h3(
 # ---------------------------------------------------------------------------
 
 def generate_h4(
-    coco:             COCO,
+    coco:              COCO,
     img_to_cat_counts: dict,
-    instance_counts:  dict,
-    target:           int = TARGET_PER_SUBCAT,
-    rng:              random.Random = None,
+    instance_counts:   dict,
+    target:            int = TARGET_PER_SUBCAT,
+    rng:               random.Random = None,
 ) -> list:
     rng = rng or random.Random(42)
     records = []
 
     cat_names = {c["id"]: c["name"] for c in coco.loadCats(coco.getCatIds())}
-    images    = list(img_to_cat_counts.keys())
+    images    = sorted(img_to_cat_counts.keys())
     rng.shuffle(images)
     count = 0
 
@@ -597,13 +676,12 @@ def generate_h4(
         if not valid:
             continue
 
-        cid, true_count = rng.choice(list(valid.items()))
+        cid, true_count = rng.choice(sorted(valid.items()))
         obj_name    = cat_names[cid]
-        obj_plural  = pluralize(obj_name)
+        obj_plural  = display_plural(obj_name)
         wrong_count = max(1, true_count + rng.choice([-1, 1, 2]))
         diff        = difficulty_from_count(instance_counts.get(obj_name, 0))
 
-        # Free-form
         records.append(make_record(
             img_id, "H4", "H4",
             f"How many {obj_plural} are in this image?",
@@ -611,7 +689,6 @@ def generate_h4(
             {"object": obj_name, "true_count": true_count,
              "question_type": "free_form"},
         ))
-        # Binary wrong
         records.append(make_record(
             img_id, "H4", "H4",
             f"Are there exactly {wrong_count} {obj_plural} in this image?",
@@ -619,7 +696,6 @@ def generate_h4(
             {"object": obj_name, "true_count": true_count,
              "wrong_count": wrong_count, "question_type": "binary_wrong"},
         ))
-        # Binary correct
         records.append(make_record(
             img_id, "H4", "H4",
             f"Are there exactly {true_count} {obj_plural} in this image?",
@@ -645,51 +721,47 @@ def generate_h5(
     target:      int = TARGET_PER_SUBCAT,
     rng:         random.Random = None,
 ) -> list:
-    """
-    Note: cooccurrence/cat_ids/id_to_idx removed from signature — they were
-    accepted but never used. Absent objects are selected uniformly here;
-    H1b/H1c already cover frequency-biased sampling.
-    """
     rng = rng or random.Random(42)
     records = []
 
-    all_cat_names = list(cat_names.values())
-    images        = list(img_to_cats.keys())
+    all_cat_names = sorted(cat_names.values())
+    images        = sorted(img_to_cats.keys())
     rng.shuffle(images)
 
-    h5a = h5b = h5c = h5d = 0
-
-    # Pre-build for H5c: map image_id → set of present category names
-    # (img_to_cats stores category IDs; translate once)
+    # Translate image_id → set of category names (used for fast lookup in H5c)
     img_to_cat_names = {
-        img_id: {cat_names[c] for c in cids}
+        img_id: set(cat_names[c] for c in cids)
         for img_id, cids in img_to_cats.items()
     }
-    images_set = set(images)
+
+    h5a = h5b = h5c = h5d = 0
+    template_counter = 0   # cycles through neg-pronoun templates deterministically
 
     for img_id in images:
-        present_names = img_to_cat_names[img_id]
-        absent_names  = list(set(all_cat_names) - present_names)
+        present_names = sorted(img_to_cat_names[img_id])
+        present_set   = set(present_names)
+        absent_names  = sorted(set(all_cat_names) - present_set)
         if not absent_names:
             continue
 
-        # H5a — negative pronoun framing
+        # H5a — negative pronoun framing (number-agreement-aware)
         if h5a < target:
             absent   = rng.choice(absent_names)
-            template = rng.choice(NEGATIVE_PRONOUN_TEMPLATES)
+            question = neg_pronoun_question(absent, template_counter)
+            template_counter += 1
             records.append(make_record(
                 img_id, "H5", "H5a",
-                template.format(OBJ=absent),
-                "yes",  # correct: yes, there IS no X
+                question,
+                "yes",   # correct: yes, there IS no X
                 "hard",
-                {"absent_object": absent, "template": template},
+                {"absent_object": absent},
             ))
             h5a += 1
 
         # H5b — implicit negation: which of A/B is NOT present
         if h5b < target and absent_names and present_names:
             absent  = rng.choice(absent_names)
-            present = rng.choice(list(present_names))
+            present = rng.choice(present_names)
             opts    = [absent, present]
             rng.shuffle(opts)
             opt_a, opt_b = opts[0], opts[1]
@@ -703,26 +775,33 @@ def generate_h5(
             h5b += 1
 
         # H5c — contrastive pair
-        # Reference image (img_id) contains shared_obj.
-        # Target image (img_b) does NOT contain shared_obj.
-        # Question on img_b: "Does this image contain a {shared_obj},
-        #                      like the reference image?" → "no"
-        # The numeric image ID is kept only in metadata; not in the question text.
+        # Reference image (img_id) HAS shared_obj.
+        # Target image (img_b)  does NOT have shared_obj.
+        # Image ID kept in metadata only — not in question text.
         if h5c < target and present_names:
-            shared_obj = rng.choice(list(present_names))
-            absent_candidates = [
+            shared_obj = rng.choice(present_names)
+            absent_candidates = sorted(
                 i for i in images
                 if i != img_id
                 and shared_obj not in img_to_cat_names.get(i, set())
-            ]
+            )
             if absent_candidates:
                 img_b = rng.choice(absent_candidates[:50])
-                art   = indefinite_article(shared_obj)
+                q, _  = existence_question(shared_obj, present=True)
+                # Rephrase as contrastive: "...like the reference image?"
+                if is_plural_token(shared_obj):
+                    plural = display_plural(shared_obj) \
+                        if shared_obj not in COCO_DISPLAY \
+                        else COCO_DISPLAY[shared_obj][0]
+                    question = (f"Are there any {plural} in this image, "
+                                f"like the reference image?")
+                else:
+                    art      = indefinite_article(shared_obj)
+                    question = (f"Does this image contain {art} {shared_obj}, "
+                                f"like the reference image?")
                 records.append(make_record(
                     img_b, "H5", "H5c",
-                    f"Does this image contain {art} {shared_obj}, "
-                    f"like the reference image?",
-                    "no", "hard",
+                    question, "no", "hard",
                     {
                         "reference_image_id": img_id,
                         "target_object":      shared_obj,
@@ -732,24 +811,32 @@ def generate_h5(
                 ))
                 h5c += 1
 
-        # H5d — unsolvable probe
-        # Question presupposes an absent object; correct response is denial.
+        # H5d — unsolvable probe (presupposition denial)
         if h5d < target and absent_names:
             absent = rng.choice(absent_names)
-            art    = indefinite_article(absent)
-            probe_templates = [
-                f"What color is the {absent} in this image?",
-                f"Where is the {absent} located in this image?",
-                f"What is the {absent} doing in this image?",
-                f"How many {pluralize(absent)} are there in this image?",
-                f"Describe the {absent} in this image.",
-            ]
-            question = rng.choice(probe_templates)
+            denial = no_existence_denial(absent)
+            if is_plural_token(absent):
+                plural = display_plural(absent) \
+                    if absent not in COCO_DISPLAY else COCO_DISPLAY[absent][0]
+                probe_templates = [
+                    f"What color are the {plural} in this image?",
+                    f"Where are the {plural} located in this image?",
+                    f"What are the {plural} doing in this image?",
+                    f"How many {plural} are there in this image?",
+                    f"Describe the {plural} in this image.",
+                ]
+            else:
+                probe_templates = [
+                    f"What color is the {absent} in this image?",
+                    f"Where is the {absent} located in this image?",
+                    f"What is the {absent} doing in this image?",
+                    f"How many {display_plural(absent)} are there in this image?",
+                    f"Describe the {absent} in this image.",
+                ]
             records.append(make_record(
                 img_id, "H5", "H5d",
-                question,
-                f"there is no {absent} in this image",
-                "hard",
+                rng.choice(probe_templates),
+                denial, "hard",
                 {"absent_object": absent, "expected_refusal": True},
             ))
             h5d += 1
@@ -775,51 +862,42 @@ def generate_h7c(
 ) -> list:
     """
     Questions embed a false presupposition about an object NOT in the image.
-    A well-grounded model should reject the presupposition.
-    A hallucinating model will answer as if the object is present.
-
-    False objects are sampled by descending COCO instance frequency (like H1b),
-    making the interference more plausible and harder to resist.
+    False objects are sampled from the top-20 most frequent absent COCO
+    categories, making the interference semantically plausible.
     """
     rng = rng or random.Random(42)
     records = []
 
     cat_names     = {c["id"]: c["name"] for c in coco.loadCats(coco.getCatIds())}
-    all_cat_names = list(cat_names.values())
-    # Sort absent candidates by frequency so popular objects are tried first
+    all_cat_names = sorted(cat_names.values())
     popular_order = sorted(all_cat_names,
-                           key=lambda n: instance_counts.get(n, 0),
-                           reverse=True)
+                           key=lambda n: instance_counts.get(n, 0), reverse=True)
 
-    images = list(img_to_cats.keys())
+    images = sorted(img_to_cats.keys())
     rng.shuffle(images)
     count = 0
 
     for img_id in images:
         if count >= target:
             break
-
-        present_names = {cat_names[c] for c in img_to_cats[img_id]}
+        present_names = set(cat_names[c] for c in img_to_cats[img_id])
         absent_names  = [n for n in popular_order if n not in present_names]
         if not absent_names:
             continue
 
-        # Pick from the top-20 most frequent absent objects for maximum plausibility
         false_obj = rng.choice(absent_names[:20])
         art       = indefinite_article(false_obj)
+        denial    = no_existence_denial(false_obj)
 
-        template, denial_tmpl = rng.choice(INTERFERENCE_TEMPLATES)
-        question        = template.format(ART=art, FALSE_OBJ=false_obj)
-        expected_denial = denial_tmpl.format(FALSE_OBJ=false_obj)
+        template_str, _ = rng.choice(INTERFERENCE_TEMPLATES)
+        question = template_str.format(ART=art, FALSE_OBJ=false_obj)
 
         records.append(make_record(
             img_id, "H7", "H7c",
-            question,
-            expected_denial,
-            "hard",
+            question, denial, "hard",
             {
                 "false_presupposition_object": false_obj,
-                "present_objects":             list(present_names),
+                "present_objects":             sorted(present_names),
                 "interference_type":           "text_to_image",
                 "expected_refusal":            True,
             },
@@ -858,14 +936,14 @@ def filter_ambiguous(records: list) -> tuple:
 
 def sanitize_needs_review(records: list) -> list:
     """
-    Remove H2b size records where either object string looks like an
-    annotation artifact (too short, non-alphabetic, or truncated).
+    Remove H2b records where either object string fails the stricter
+    review-token quality check (too short, non-alpha, VG artifacts).
     """
     clean = []
     for r in records:
         obj_a = r["metadata"].get("object_a", "")
         obj_b = r["metadata"].get("object_b", "")
-        if sanitize_vg_token(obj_a) and sanitize_vg_token(obj_b):
+        if sanitize_review_token(obj_a) and sanitize_review_token(obj_b):
             clean.append(r)
         else:
             log.debug(f"Filtered needs_review artifact: '{obj_a}' / '{obj_b}'")
@@ -902,7 +980,7 @@ def main(args):
     log.info("Building annotation cache...")
     img_to_cats, img_to_cat_counts = build_annotation_cache(coco)
 
-    # Build co-occurrence matrix (reuses img_to_cats)
+    # Build co-occurrence matrix
     cooccurrence, cat_ids, id_to_idx, _ = build_cooccurrence(coco, img_to_cats)
 
     # Load Visual Genome
@@ -994,9 +1072,9 @@ if __name__ == "__main__":
         "--target_scenarios", type=int, default=TARGET_PER_SUBCAT,
         help=(
             "Number of source scenarios to sample per sub-category. "
-            "Note: some generators emit multiple questions per scenario "
-            "(H1a: 2, H3a: up to 2, H4: 3), so final question counts will "
-            "exceed this value for those sub-categories."
+            "Some generators emit multiple questions per scenario "
+            "(H1a: 2, H3a: up to 2, H4: 3), so final question counts "
+            "will exceed this value for those sub-categories."
         ),
     )
     parser.add_argument("--seed", type=int, default=42)
