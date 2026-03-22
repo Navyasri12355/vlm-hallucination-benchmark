@@ -159,6 +159,11 @@ def run_single(processor, model, image_path: str, question: str) -> str:
     """
     Run one (image, question) pair through LLaVA-1.5-7B.
     Returns the raw generated text (prompt tokens stripped).
+
+    Note: LlavaNextForConditionalGeneration requires image_sizes to be passed
+    to generate(). We move each tensor individually rather than calling
+    .to(device) on the whole BatchFeature to avoid dropping image_sizes,
+    which is a plain Python list and has no .to() method.
     """
     image  = Image.open(image_path).convert("RGB")
     prompt = build_prompt(question)
@@ -167,19 +172,25 @@ def run_single(processor, model, image_path: str, question: str) -> str:
         text=prompt,
         images=image,
         return_tensors="pt",
-    ).to(model.device)
+    )
+
+    # Move tensor values to device; leave non-tensor values (e.g. image_sizes) as-is
+    inputs_on_device = {
+        k: v.to(model.device) if isinstance(v, torch.Tensor) else v
+        for k, v in inputs.items()
+    }
 
     with torch.no_grad():
         output_ids = model.generate(
-            **inputs,
+            **inputs_on_device,
             max_new_tokens=MAX_NEW_TOKENS,
             do_sample=False,           # greedy decoding — deterministic
             pad_token_id=processor.tokenizer.eos_token_id,
         )
 
     # Decode only the newly generated tokens
-    input_len    = inputs["input_ids"].shape[1]
-    generated    = output_ids[0][input_len:]
+    input_len = inputs_on_device["input_ids"].shape[1]
+    generated = output_ids[0][input_len:]
     return processor.tokenizer.decode(generated, skip_special_tokens=True).strip()
 
 
@@ -294,7 +305,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--images_dir",
-        default="/kaggle/input/coco-2017-dataset/val2017",
+        default="/kaggle/input/coco-2017-dataset/coco2017/val2017",
         help="Directory containing COCO val2017 images",
     )
     parser.add_argument(
