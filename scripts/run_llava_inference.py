@@ -56,7 +56,7 @@ log = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 # Constants
 # ---------------------------------------------------------------------------
-MODEL_ID       = "llava-hf/llava-1.5-7b-hf"
+MODEL_ID       = "llava-hf/llava-v1.6-mistral-7b-hf"
 MAX_NEW_TOKENS = 128
 IMAGE_EXTS     = [".jpg", ".jpeg", ".png"]
 CHECKPOINT_EVERY = 100   # save checkpoint every N records
