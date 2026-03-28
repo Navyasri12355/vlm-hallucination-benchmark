@@ -1,0 +1,166 @@
+{
+  "overall": {
+    "accuracy": 0.7008,
+    "correct": 3996,
+    "total": 5702,
+    "unscored": 158
+  },
+  "by_subcategory": {
+    "H1a": {
+      "accuracy": 0.9522,
+      "correct": 757,
+      "total": 795,
+      "unscored": 5
+    },
+    "H1b": {
+      "accuracy": 0.9169,
+      "correct": 364,
+      "total": 397,
+      "unscored": 1
+    },
+    "H1c": {
+      "accuracy": 0.7785,
+      "correct": 246,
+      "total": 316,
+      "unscored": 1
+    },
+    "H2a": {
+      "accuracy": 0.7511,
+      "correct": 501,
+      "total": 667,
+      "unscored": 0
+    },
+    "H3a": {
+      "accuracy": 0.5802,
+      "correct": 217,
+      "total": 374,
+      "unscored": 16
+    },
+    "H3b": {
+      "accuracy": 0.9195,
+      "correct": 80,
+      "total": 87,
+      "unscored": 3
+    },
+    "H4": {
+      "accuracy": 0.5716,
+      "correct": 647,
+      "total": 1132,
+      "unscored": 68
+    },
+    "H5a": {
+      "accuracy": 0.7558,
+      "correct": 291,
+      "total": 385,
+      "unscored": 15
+    },
+    "H5b": {
+      "accuracy": 0.5214,
+      "correct": 183,
+      "total": 351,
+      "unscored": 49
+    },
+    "H5c": {
+      "accuracy": 0.9749,
+      "correct": 388,
+      "total": 398,
+      "unscored": 0
+    },
+    "H5d": {
+      "accuracy": 0.545,
+      "correct": 218,
+      "total": 400,
+      "unscored": 0
+    },
+    "H7c": {
+      "accuracy": 0.26,
+      "correct": 104,
+      "total": 400,
+      "unscored": 0
+    }
+  },
+  "by_category": {
+    "H1": {
+      "accuracy": 0.9065,
+      "correct": 1367,
+      "total": 1508,
+      "unscored": 7
+    },
+    "H2": {
+      "accuracy": 0.7511,
+      "correct": 501,
+      "total": 667,
+      "unscored": 0
+    },
+    "H3": {
+      "accuracy": 0.6443,
+      "correct": 297,
+      "total": 461,
+      "unscored": 19
+    },
+    "H4": {
+      "accuracy": 0.5716,
+      "correct": 647,
+      "total": 1132,
+      "unscored": 68
+    },
+    "H5": {
+      "accuracy": 0.704,
+      "correct": 1080,
+      "total": 1534,
+      "unscored": 64
+    },
+    "H7": {
+      "accuracy": 0.26,
+      "correct": 104,
+      "total": 400,
+      "unscored": 0
+    }
+  },
+  "by_difficulty": {
+    "easy": {
+      "accuracy": 0.8825,
+      "correct": 856,
+      "total": 970,
+      "unscored": 40
+    },
+    "hard": {
+      "accuracy": 0.5534,
+      "correct": 1367,
+      "total": 2470,
+      "unscored": 28
+    },
+    "medium": {
+      "accuracy": 0.7838,
+      "correct": 1773,
+      "total": 2262,
+      "unscored": 90
+    }
+  },
+  "by_question_type": {
+    "binary_correct": {
+      "accuracy": 0.86,
+      "correct": 344,
+      "total": 400,
+      "unscored": 0
+    },
+    "binary_wrong": {
+      "accuracy": 0.265,
+      "correct": 106,
+      "total": 400,
+      "unscored": 0
+    },
+    "default": {
+      "accuracy": 0.7328,
+      "correct": 3349,
+      "total": 4570,
+      "unscored": 90
+    },
+    "free_form": {
+      "accuracy": 0.5934,
+      "correct": 197,
+      "total": 332,
+      "unscored": 68
+    }
+  }
+}
