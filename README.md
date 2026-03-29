@@ -40,33 +40,6 @@ Full taxonomy with definitions, question templates, metrics, and references: [`d
 
 ## Repository Structure
 
-```
-vlm-hallucination-benchmark/
-│
-├── README.md
-├── requirements.txt
-├── .gitignore
-│
-├── data/
-│   ├── processed/               ← Generated QA pairs (benchmark_v1.json)
-│   └── README.md
-│
-├── docs/
-│   └── taxonomy.md              ← Full hallucination taxonomy (7 categories, 32 papers)
-│
-├── scripts/
-│   ├── generate_dataset.py      ← Dataset generation from COCO + Visual Genome
-│   ├── run_evaluation.py        ← Run VLMs on benchmark (coming soon)
-│   └── score_results.py         ← Per-category scoring and analysis (coming soon)
-│
-├── notebooks/
-│   └── README.md                ← Links to Kaggle notebooks
-│
-└── results/
-    ├── exploration_findings.json  ← COCO annotation exploration summary
-    └── cooccurrence_heatmap.png   ← Co-occurrence matrix for top 30 COCO categories
-```
-
 ---
 
 ## Progress
@@ -79,33 +52,60 @@ vlm-hallucination-benchmark/
 
 ### ✅ Week 3 — COCO Annotation Exploration
 - Audited MS-COCO val2017 annotation structure (5,000 images, 80 categories)
-- Built co-occurrence matrix for adversarial H1 sampling
-- Measured Visual Genome / COCO overlap for H2/H3 question generation
+- Built co-occurrence matrix for adversarial H1c sampling
+- Measured Visual Genome / COCO overlap (2,170 images, 43.4%) for H2/H3 generation
 
-**Key findings:**
+### ✅ Week 3–5 — Dataset Construction
+- Generated 5,860 QA pairs across 12 subcategories from COCO val2017 + Visual Genome
+- Covers H1a/b/c, H2a, H3a/b, H4, H5a/b/c/d, H7c
+- Adversarial sampling, contrastive pairs, unsolvable probes, and interference questions included
 
-| Finding | Value | Impact on Dataset Design |
+**Dataset composition:**
+
+| Subcategory | Questions | Type |
 |---|---|---|
-| Total COCO val2017 images | 5,000 | Base image pool for H1, H4, H5 |
-| Categories with >500 instances | 10 / 80 | Target capped at available instances per category |
-| Categories with <300 instances | 50 / 80 | Sparse categories grouped or capped |
-| VG / COCO overlap | 2,170 images (43.4%) | H2/H3 questions restricted to this subset |
-| Dominant adversarial pair | `person` (50+ categories) | De-duplicated — `person` skipped as adversarial target |
+| H1a | 800 | Binary yes/no (random absent + present pairs) |
+| H1b | 397 | Binary yes/no (popular absent) |
+| H1c | 337 | Binary yes/no (adversarial co-occurrence) |
+| H2a | 667 | Binary yes/no (color attribute) |
+| H3a | 587 | Binary yes/no (spatial relations) |
+| H3b | 168 | Binary yes/no (action/interaction) |
+| H4  | 1,200 | Free-form + binary counting |
+| H5a | 400 | Binary yes/no (negative pronoun) |
+| H5b | 400 | A/B choice (implicit negation) |
+| H5c | 400 | Binary yes/no (contrastive pair) |
+| H5d | 400 | Open-ended refusal (unsolvable probe) |
+| H7c | 400 | Open-ended refusal (text-image interference) |
+| **Total** | **5,860** | |
 
-**Top meaningful adversarial pairs (H1c):**
+### ✅ Week 6–7 — Model Evaluation (LLaVA-1.6)
+- Ran LLaVA-1.6-Mistral-7B (4-bit quantized) on all 5,860 benchmark records
+- Overall accuracy: **70.1%** across scored subcategories
 
-| Object in image | Adversarial absent object |
-|---|---|
-| microwave | oven |
-| keyboard | mouse |
-| zebra | giraffe |
-| fork | dining table |
-| toilet | sink |
-| cat | bed |
+**LLaVA-1.6-Mistral-7B results:**
 
-### 🔄 Week 3–5 — Dataset Construction (In Progress)
-- [`scripts/generate_dataset.py`](scripts/generate_dataset.py) written — generates H1–H5 from COCO + Visual Genome
-- Pending: run script, validate output, generate H6/H7 questions
+| Subcategory | Accuracy | Notes |
+|---|---|---|
+| H1a | 95.2% | Strong on basic existence |
+| H1b | 91.7% | Popular objects well handled |
+| H1c | 77.9% | Adversarial pairs cause noticeable drop |
+| H2a | 75.1% | Color attributes moderately accurate |
+| H3a | 58.0% | Spatial relations a clear weakness |
+| H3b | 91.9% | Action relations handled well |
+| H4  | 57.2% | Counting consistently difficult |
+| H5a | 75.6% | Negative pronoun handled moderately |
+| H5b | 52.1% | Implicit negation near chance |
+| H5c | 97.5% | Contrastive pairs — model defaults to "no" |
+| H5d | 54.5% | Unsolvable probes — model often answers rather than refusing |
+| H7c | 26.0% | Text-image interference — lowest score, strongest finding |
+
+**Key finding:** `binary_wrong` accuracy (26.5%) vs `binary_correct` accuracy (86.0%) reveals a strong sycophancy pattern — the model tends to agree with whatever the question asserts regardless of visual evidence.
+
+### 🔄 Week 7–8 — Model Evaluation (InstructBLIP, In Progress)
+- Running InstructBLIP-Vicuna-7B (8-bit quantized) on all 5,860 records
+- Results pending
+
+> All Kaggle notebooks (COCO exploration, Model inferencing (Llava and InstructBLIP)) are linked in [`notebooks/README.md`](notebooks/README.md).
 
 ---
 
@@ -116,78 +116,17 @@ vlm-hallucination-benchmark/
 - **Visual Genome** — attribute and relationship annotations for H2/H3 questions
 
 ### Format
+
 Each record in `data/processed/benchmark_v1.json`:
 
-```json
-{
-  "image_id":     123456,
-  "category":     "H1",
-  "subcategory":  "H1c",
-  "question":     "Is there a microwave in this image?",
-  "ground_truth": "no",
-  "difficulty":   "hard",
-  "metadata": {
-    "absent_object":   "microwave",
-    "sampling":        "adversarial",
-    "present_objects": ["oven", "sink", "refrigerator"]
-  }
-}
-```
-
-### Planned Size
-~2,000–5,000 questions across all categories once generation is complete.
-
-
 ---
 
-## Models to Evaluate
+## Models Evaluated
 
-| Model | Size | Source | Status |
-|---|---|---|---|
-| LLaVA-1.5 | 7B | HuggingFace | ⏳ Planned |
-| InstructBLIP | 7B | HuggingFace | ⏳ Planned |
-| GPT-4V | — | OpenAI API | ⏳ Planned |
-| Gemini Vision | — | Google API | ⏳ Planned |
-
----
-
-## Setup
-
-```bash
-git clone https://github.com/Navyasri12355/vlm-hallucination-benchmark.git
-cd vlm-hallucination-benchmark
-pip install -r requirements.txt
-```
-
-### Download Data
-
-```bash
-# COCO val2017 annotations
-wget https://images.cocodataset.org/annotations/annotations_trainval2017.zip
-unzip annotations_trainval2017.zip
-
-# Visual Genome
-wget https://homes.cs.washington.edu/~ranjay/visualgenome/data/dataset/attributes.json.zip
-wget https://homes.cs.washington.edu/~ranjay/visualgenome/data/dataset/relationships.json.zip
-wget https://homes.cs.washington.edu/~ranjay/visualgenome/data/dataset/image_data.json.zip
-unzip attributes.json.zip -d visual_genome/
-unzip relationships.json.zip -d visual_genome/
-unzip image_data.json.zip
-```
-
-### Generate Dataset
-
-```bash
-python scripts/generate_dataset.py \
-    --coco_ann  annotations/instances_val2017.json \
-    --vg_attrs  visual_genome/attributes.json \
-    --vg_rels   visual_genome/relationships.json \
-    --vg_imgs   image_data.json \
-    --findings  results/exploration_findings.json \
-    --output    data/processed/benchmark_v1.json \
-    --target    400 \
-    --seed      42
-```
+| Model | Size | Quantization | VRAM | Overall Accuracy | Status |
+|---|---|---|---|---|---|
+| LLaVA-1.6-Mistral | 7B | 4-bit (nf4) | ~6GB | 70.1% | ✅ Complete |
+| InstructBLIP-Vicuna | 7B | 8-bit | ~9GB | — | 🔄 In Progress |
 
 ---
 
@@ -201,8 +140,6 @@ All experiments run on free-tier cloud GPUs. No local GPU required.
 | Google Colab | T4 | ~4 hrs/session | Quick prototyping |
 | Lightning.ai | T4 | 22 hrs/month | Overflow experiments |
 | HuggingFace Spaces | A100 (shared) | Free ZeroGPU | Final demo |
-
-LLaVA-7B runs comfortably on a single T4 with 4-bit quantization (~6GB VRAM).
 
 ---
 
@@ -231,7 +168,8 @@ Full reference list with arXiv links: [`docs/taxonomy.md`](docs/taxonomy.md)
 |---|---|---|
 | #1 | `docs/taxonomy-v1` | Hallucination taxonomy v1 — 7 categories, 32 papers |
 | #2 | `data/coco-annotation-exploration` | COCO annotation exploration — co-occurrence matrix, VG overlap |
-| #3 | `data/qa-generation-v1` | Dataset generation script (in progress) |
+| #3 | `data/qa-generation-v1` | Dataset generation — 5,860 QA pairs across 12 subcategories |
+| #4 | `eval/model-inference` | LLaVA-1.6-Mistral-7B inference + scoring (70.1% overall); InstructBLIP in progress |
 
 ---
 
